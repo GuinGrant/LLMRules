@@ -1,0 +1,1000 @@
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6390, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6390 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1095, limit: 10/second", "output": "tcp dport 1095 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8966, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8966 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7804, limit: 15/minute", "output": "tcp dport 7804 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 69.144.102.106", "output": "ip saddr 69.144.102.106 tcp dport 80 accept\nip saddr 69.144.102.106 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 92, Log prefix: 'Blocked attempt: '", "output": "tcp dport 92 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 536", "output": "udp dport 536 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6758, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6758 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 42.177.231.197", "output": "ip saddr 42.177.231.197 tcp dport 80 accept\nip saddr 42.177.231.197 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 11.194.208.212", "output": "ip saddr 11.194.208.212 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept ping requests but limit to prevent flood.", "input": "Rate: 20/minute", "output": "ip protocol icmp icmp type echo-request limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 164.248.100.20", "output": "ip saddr 164.248.100.20 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1686, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1686 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7155, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7155 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 12.52.174.81", "output": "ip saddr 12.52.174.81 tcp dport 80 accept\nip saddr 12.52.174.81 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4968, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4968 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7198, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7198 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6812, limit: 20/minute", "output": "tcp dport 6812 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that accept ping requests but limit to prevent flood.", "input": "Rate: 10/second", "output": "ip protocol icmp icmp type echo-request limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 16.232.54.141", "output": "ip saddr 16.232.54.141 tcp dport 80 accept\nip saddr 16.232.54.141 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7805", "output": "udp dport 7805 accept"}
+{"instruction": "Generate a nftables rule that accept ping requests but limit to prevent flood.", "input": "Rate: 15/minute", "output": "ip protocol icmp icmp type echo-request limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 793, limit: 10/second", "output": "tcp dport 793 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that drop all traffic except loopback and established connections.", "input": "Use a default drop policy with exceptions for lo and established states.", "output": "chain input {\n  type filter hook input priority 0; policy drop;\n  iif \"lo\" accept\n  ct state established,related accept\n}"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 108.199.67.139", "output": "ip saddr 108.199.67.139 tcp dport 80 accept\nip saddr 108.199.67.139 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 91.84.173.23", "output": "ip saddr 91.84.173.23 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 176.233.75.226", "output": "ip saddr 176.233.75.226 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1060, Log prefix: 'Blocked attempt: '", "output": "tcp dport 1060 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 210.94.254.180", "output": "ip saddr 210.94.254.180 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6959, Log prefix: 'Log entry: '", "output": "tcp dport 6959 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 32.13.254.206", "output": "ip saddr 32.13.254.206 tcp dport 80 accept\nip saddr 32.13.254.206 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1477", "output": "udp dport 1477 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 51.248.134.86", "output": "ip saddr 51.248.134.86 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6971, Log prefix: 'Alert: '", "output": "tcp dport 6971 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4638", "output": "udp dport 4638 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 209.234.142.56", "output": "ip saddr 209.234.142.56 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1382, Log prefix: 'Log entry: '", "output": "tcp dport 1382 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2982", "output": "udp dport 2982 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2412", "output": "udp dport 2412 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 572, limit: 20/minute", "output": "tcp dport 572 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8351", "output": "udp dport 8351 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 117.103.96.207", "output": "ip saddr 117.103.96.207 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3709, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3709 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 17.191.166.243", "output": "ip saddr 17.191.166.243 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2636", "output": "udp dport 2636 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1749, limit: 15/minute", "output": "tcp dport 1749 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3658", "output": "udp dport 3658 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 69.210.197.175", "output": "ip saddr 69.210.197.175 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 9000", "output": "udp dport 9000 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 46.95.239.105", "output": "ip saddr 46.95.239.105 tcp dport 80 accept\nip saddr 46.95.239.105 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 18.233.100.237", "output": "ip saddr 18.233.100.237 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 127.16.70.242", "output": "ip saddr 127.16.70.242 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1576, limit: 10/second", "output": "tcp dport 1576 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1024", "output": "udp dport 1024 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2074, limit: 20/minute", "output": "tcp dport 2074 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2530, limit: 15/minute", "output": "tcp dport 2530 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 38.194.0.243", "output": "ip saddr 38.194.0.243 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 125.115.110.104", "output": "ip saddr 125.115.110.104 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 221.88.206.58", "output": "ip saddr 221.88.206.58 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2698, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2698 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8840, Log prefix: 'Alert: '", "output": "tcp dport 8840 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 55.46.148.152", "output": "ip saddr 55.46.148.152 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2126, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2126 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3414, Log prefix: 'Suspicious activity: '", "output": "tcp dport 3414 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 172.84.183.206", "output": "ip saddr 172.84.183.206 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6026", "output": "udp dport 6026 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8333, Log prefix: 'Log entry: '", "output": "tcp dport 8333 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 884", "output": "udp dport 884 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 69.131.255.172", "output": "ip saddr 69.131.255.172 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 72.169.177.27", "output": "ip saddr 72.169.177.27 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4582, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4582 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 56.243.51.98", "output": "ip saddr 56.243.51.98 tcp dport 80 accept\nip saddr 56.243.51.98 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 139.55.165.37", "output": "ip saddr 139.55.165.37 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept ping requests but limit to prevent flood.", "input": "Rate: 5/second", "output": "ip protocol icmp icmp type echo-request limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 123.184.227.60", "output": "ip saddr 123.184.227.60 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 35.242.97.215", "output": "ip saddr 35.242.97.215 tcp dport 80 accept\nip saddr 35.242.97.215 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3395", "output": "udp dport 3395 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 77.27.16.112", "output": "ip saddr 77.27.16.112 tcp dport 80 accept\nip saddr 77.27.16.112 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 368, Log prefix: 'Alert: '", "output": "tcp dport 368 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7466, Log prefix: 'Alert: '", "output": "tcp dport 7466 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 641", "output": "udp dport 641 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 67.47.110.47", "output": "ip saddr 67.47.110.47 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4946, Log prefix: 'Alert: '", "output": "tcp dport 4946 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6292, limit: 10/second", "output": "tcp dport 6292 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 84.86.11.79", "output": "ip saddr 84.86.11.79 tcp dport 80 accept\nip saddr 84.86.11.79 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 214.125.47.5", "output": "ip saddr 214.125.47.5 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 18.208.131.121", "output": "ip saddr 18.208.131.121 tcp dport 80 accept\nip saddr 18.208.131.121 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 143.26.179.53", "output": "ip saddr 143.26.179.53 tcp dport 80 accept\nip saddr 143.26.179.53 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 177.244.240.156", "output": "ip saddr 177.244.240.156 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 130.249.63.114", "output": "ip saddr 130.249.63.114 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 24.224.47.173", "output": "ip saddr 24.224.47.173 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 150.101.2.146", "output": "ip saddr 150.101.2.146 tcp dport 80 accept\nip saddr 150.101.2.146 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 17.184.44.95", "output": "ip saddr 17.184.44.95 tcp dport 80 accept\nip saddr 17.184.44.95 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 176.106.14.128", "output": "ip saddr 176.106.14.128 tcp dport 80 accept\nip saddr 176.106.14.128 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 136.247.96.20", "output": "ip saddr 136.247.96.20 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7107, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7107 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 50.235.34.146", "output": "ip saddr 50.235.34.146 tcp dport 80 accept\nip saddr 50.235.34.146 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 117.144.216.4", "output": "ip saddr 117.144.216.4 tcp dport 80 accept\nip saddr 117.144.216.4 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 184, Log prefix: 'Suspicious activity: '", "output": "tcp dport 184 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3388, limit: 10/second", "output": "tcp dport 3388 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7562, limit: 10/second", "output": "tcp dport 7562 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 177.62.101.116", "output": "ip saddr 177.62.101.116 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 204.240.40.157", "output": "ip saddr 204.240.40.157 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6978, Log prefix: 'Log entry: '", "output": "tcp dport 6978 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1386, Log prefix: 'Blocked attempt: '", "output": "tcp dport 1386 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5826, limit: 20/minute", "output": "tcp dport 5826 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4104, limit: 20/minute", "output": "tcp dport 4104 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4553, Log prefix: 'Blocked attempt: '", "output": "tcp dport 4553 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3750, limit: 5/second", "output": "tcp dport 3750 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8891, Log prefix: 'Alert: '", "output": "tcp dport 8891 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 189.44.147.222", "output": "ip saddr 189.44.147.222 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4343, Log prefix: 'Log entry: '", "output": "tcp dport 4343 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6310, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6310 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 183.172.173.192", "output": "ip saddr 183.172.173.192 tcp dport 80 accept\nip saddr 183.172.173.192 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 148.240.34.159", "output": "ip saddr 148.240.34.159 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3153", "output": "udp dport 3153 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7275", "output": "udp dport 7275 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 339, Log prefix: 'Suspicious activity: '", "output": "tcp dport 339 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 167.208.121.236", "output": "ip saddr 167.208.121.236 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7533, Log prefix: 'Alert: '", "output": "tcp dport 7533 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8740, limit: 20/minute", "output": "tcp dport 8740 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 220.134.152.17", "output": "ip saddr 220.134.152.17 tcp dport 80 accept\nip saddr 220.134.152.17 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3792, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3792 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8498, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8498 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 117.105.165.10", "output": "ip saddr 117.105.165.10 tcp dport 80 accept\nip saddr 117.105.165.10 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 96.141.222.78", "output": "ip saddr 96.141.222.78 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 16.127.249.48", "output": "ip saddr 16.127.249.48 tcp dport 80 accept\nip saddr 16.127.249.48 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7087, Log prefix: 'Log entry: '", "output": "tcp dport 7087 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6688, limit: 10/second", "output": "tcp dport 6688 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5615", "output": "udp dport 5615 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3902, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3902 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 44.241.26.52", "output": "ip saddr 44.241.26.52 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 67.96.65.29", "output": "ip saddr 67.96.65.29 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 168.166.18.77", "output": "ip saddr 168.166.18.77 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2601", "output": "udp dport 2601 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7845, Log prefix: 'Log entry: '", "output": "tcp dport 7845 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2810, Log prefix: 'Log entry: '", "output": "tcp dport 2810 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 110.138.227.175", "output": "ip saddr 110.138.227.175 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5875, Log prefix: 'Log entry: '", "output": "tcp dport 5875 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4773, Log prefix: 'Alert: '", "output": "tcp dport 4773 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 185.188.230.241", "output": "ip saddr 185.188.230.241 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5654, Log prefix: 'Log entry: '", "output": "tcp dport 5654 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8897, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8897 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7620, Log prefix: 'Log entry: '", "output": "tcp dport 7620 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 195.96.160.155", "output": "ip saddr 195.96.160.155 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 185.94.191.220", "output": "ip saddr 185.94.191.220 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 99.207.241.153", "output": "ip saddr 99.207.241.153 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5626, Log prefix: 'Log entry: '", "output": "tcp dport 5626 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 149.121.22.34", "output": "ip saddr 149.121.22.34 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 186.92.42.52", "output": "ip saddr 186.92.42.52 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 162.199.79.95", "output": "ip saddr 162.199.79.95 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 182.203.63.36", "output": "ip saddr 182.203.63.36 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2103, Log prefix: 'Log entry: '", "output": "tcp dport 2103 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 990, Log prefix: 'Blocked attempt: '", "output": "tcp dport 990 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7702, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7702 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1432", "output": "udp dport 1432 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3183", "output": "udp dport 3183 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1324, Log prefix: 'Blocked attempt: '", "output": "tcp dport 1324 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8219", "output": "udp dport 8219 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1850, Log prefix: 'Log entry: '", "output": "tcp dport 1850 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 124.0.239.172", "output": "ip saddr 124.0.239.172 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1585, Log prefix: 'Log entry: '", "output": "tcp dport 1585 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2104", "output": "udp dport 2104 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 105.71.99.251", "output": "ip saddr 105.71.99.251 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 15.29.154.242", "output": "ip saddr 15.29.154.242 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2175, limit: 20/minute", "output": "tcp dport 2175 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 70.190.246.188", "output": "ip saddr 70.190.246.188 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 52.91.204.217", "output": "ip saddr 52.91.204.217 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 152.128.118.118", "output": "ip saddr 152.128.118.118 tcp dport 80 accept\nip saddr 152.128.118.118 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1901, limit: 15/minute", "output": "tcp dport 1901 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 30.241.117.73", "output": "ip saddr 30.241.117.73 tcp dport 80 accept\nip saddr 30.241.117.73 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7983, Log prefix: 'Alert: '", "output": "tcp dport 7983 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 31.144.8.182", "output": "ip saddr 31.144.8.182 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 159.241.56.25", "output": "ip saddr 159.241.56.25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5292", "output": "udp dport 5292 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2774", "output": "udp dport 2774 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 94", "output": "udp dport 94 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 11.115.128.181", "output": "ip saddr 11.115.128.181 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6948, limit: 15/minute", "output": "tcp dport 6948 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 85.232.154.87", "output": "ip saddr 85.232.154.87 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 147.172.212.0", "output": "ip saddr 147.172.212.0 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6847, limit: 20/minute", "output": "tcp dport 6847 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 115.192.208.2", "output": "ip saddr 115.192.208.2 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5933", "output": "udp dport 5933 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 157.109.244.167", "output": "ip saddr 157.109.244.167 tcp dport 80 accept\nip saddr 157.109.244.167 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5727", "output": "udp dport 5727 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 762, Log prefix: 'Alert: '", "output": "tcp dport 762 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 78.254.201.81", "output": "ip saddr 78.254.201.81 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4361, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4361 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6668, limit: 15/minute", "output": "tcp dport 6668 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2554, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2554 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5453, Log prefix: 'Alert: '", "output": "tcp dport 5453 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 207.114.113.81", "output": "ip saddr 207.114.113.81 tcp dport 80 accept\nip saddr 207.114.113.81 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 170.247.87.215", "output": "ip saddr 170.247.87.215 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4190, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4190 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5111, Log prefix: 'Blocked attempt: '", "output": "tcp dport 5111 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 127.251.22.122", "output": "ip saddr 127.251.22.122 tcp dport 80 accept\nip saddr 127.251.22.122 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 17.62.42.31", "output": "ip saddr 17.62.42.31 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 156.226.18.226", "output": "ip saddr 156.226.18.226 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 60.70.248.47", "output": "ip saddr 60.70.248.47 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 91.51.34.12", "output": "ip saddr 91.51.34.12 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1896, Log prefix: 'Alert: '", "output": "tcp dport 1896 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4602, limit: 15/minute", "output": "tcp dport 4602 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3272, limit: 20/minute", "output": "tcp dport 3272 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 415", "output": "udp dport 415 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 200.194.211.33", "output": "ip saddr 200.194.211.33 tcp dport 80 accept\nip saddr 200.194.211.33 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6739, Log prefix: 'Alert: '", "output": "tcp dport 6739 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1059", "output": "udp dport 1059 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 83.116.236.62", "output": "ip saddr 83.116.236.62 tcp dport 80 accept\nip saddr 83.116.236.62 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6742, limit: 15/minute", "output": "tcp dport 6742 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 188.51.221.190", "output": "ip saddr 188.51.221.190 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 125.184.126.82", "output": "ip saddr 125.184.126.82 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8129, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8129 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3225", "output": "udp dport 3225 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 15.67.219.63", "output": "ip saddr 15.67.219.63 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7874, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7874 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 70.75.64.166", "output": "ip saddr 70.75.64.166 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 143.130.211.11", "output": "ip saddr 143.130.211.11 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1356, Log prefix: 'Blocked attempt: '", "output": "tcp dport 1356 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 166.130.46.107", "output": "ip saddr 166.130.46.107 tcp dport 80 accept\nip saddr 166.130.46.107 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7111", "output": "udp dport 7111 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 28.128.48.132", "output": "ip saddr 28.128.48.132 tcp dport 80 accept\nip saddr 28.128.48.132 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 160.7.150.41", "output": "ip saddr 160.7.150.41 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 812, limit: 5/second", "output": "tcp dport 812 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1339, Log prefix: 'Alert: '", "output": "tcp dport 1339 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8940, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8940 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2990", "output": "udp dport 2990 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5720, limit: 20/minute", "output": "tcp dport 5720 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 176.72.170.204", "output": "ip saddr 176.72.170.204 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 140.99.149.223", "output": "ip saddr 140.99.149.223 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 165.55.163.16", "output": "ip saddr 165.55.163.16 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6976", "output": "udp dport 6976 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 123", "output": "udp dport 123 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 138.190.118.199", "output": "ip saddr 138.190.118.199 tcp dport 80 accept\nip saddr 138.190.118.199 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 194.76.110.197", "output": "ip saddr 194.76.110.197 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 152.207.67.211", "output": "ip saddr 152.207.67.211 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 137.135.98.98", "output": "ip saddr 137.135.98.98 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8554, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8554 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 157.100.138.43", "output": "ip saddr 157.100.138.43 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8816, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8816 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8638, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8638 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 198.211.58.181", "output": "ip saddr 198.211.58.181 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 30.196.101.23", "output": "ip saddr 30.196.101.23 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 49.203.184.142", "output": "ip saddr 49.203.184.142 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7764, limit: 15/minute", "output": "tcp dport 7764 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4779, Log prefix: 'Log entry: '", "output": "tcp dport 4779 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3663, Log prefix: 'Log entry: '", "output": "tcp dport 3663 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 42.178.92.199", "output": "ip saddr 42.178.92.199 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1125", "output": "udp dport 1125 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 196.144.128.219", "output": "ip saddr 196.144.128.219 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4185", "output": "udp dport 4185 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7392, Log prefix: 'Alert: '", "output": "tcp dport 7392 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1240, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1240 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6180", "output": "udp dport 6180 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6142, Log prefix: 'Log entry: '", "output": "tcp dport 6142 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6533, limit: 5/second", "output": "tcp dport 6533 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 201.239.199.199", "output": "ip saddr 201.239.199.199 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6034, Log prefix: 'Log entry: '", "output": "tcp dport 6034 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 60.79.217.103", "output": "ip saddr 60.79.217.103 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6846", "output": "udp dport 6846 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 114.144.108.241", "output": "ip saddr 114.144.108.241 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 90.43.37.196", "output": "ip saddr 90.43.37.196 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 72.134.174.81", "output": "ip saddr 72.134.174.81 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 248, Log prefix: 'Log entry: '", "output": "tcp dport 248 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8263, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8263 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 126.6.87.34", "output": "ip saddr 126.6.87.34 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 131.19.77.162", "output": "ip saddr 131.19.77.162 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 164.22.96.197", "output": "ip saddr 164.22.96.197 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 187.25.68.81", "output": "ip saddr 187.25.68.81 tcp dport 80 accept\nip saddr 187.25.68.81 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 189.51.124.160", "output": "ip saddr 189.51.124.160 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2950", "output": "udp dport 2950 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8195, Log prefix: 'Log entry: '", "output": "tcp dport 8195 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 135.70.220.17", "output": "ip saddr 135.70.220.17 tcp dport 80 accept\nip saddr 135.70.220.17 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 201.212.192.18", "output": "ip saddr 201.212.192.18 tcp dport 80 accept\nip saddr 201.212.192.18 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7896, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7896 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 133.85.136.36", "output": "ip saddr 133.85.136.36 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4056, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4056 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 34.108.237.205", "output": "ip saddr 34.108.237.205 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2825, Log prefix: 'Log entry: '", "output": "tcp dport 2825 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 138.218.76.133", "output": "ip saddr 138.218.76.133 tcp dport 80 accept\nip saddr 138.218.76.133 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6836, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6836 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 146.4.137.198", "output": "ip saddr 146.4.137.198 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 160.54.130.66", "output": "ip saddr 160.54.130.66 tcp dport 80 accept\nip saddr 160.54.130.66 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2813, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2813 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6039, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6039 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3344", "output": "udp dport 3344 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 201.61.223.145", "output": "ip saddr 201.61.223.145 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 102.211.221.15", "output": "ip saddr 102.211.221.15 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 30.154.95.238", "output": "ip saddr 30.154.95.238 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 205.156.70.236", "output": "ip saddr 205.156.70.236 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 168.115.47.187", "output": "ip saddr 168.115.47.187 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6848, Log prefix: 'Log entry: '", "output": "tcp dport 6848 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 108.75.169.73", "output": "ip saddr 108.75.169.73 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 116.20.147.108", "output": "ip saddr 116.20.147.108 tcp dport 80 accept\nip saddr 116.20.147.108 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6162, Log prefix: 'Alert: '", "output": "tcp dport 6162 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3599, Log prefix: 'Alert: '", "output": "tcp dport 3599 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 49.125.25.113", "output": "ip saddr 49.125.25.113 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6364, Log prefix: 'Alert: '", "output": "tcp dport 6364 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 179.237.15.4", "output": "ip saddr 179.237.15.4 tcp dport 80 accept\nip saddr 179.237.15.4 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 180.122.84.1", "output": "ip saddr 180.122.84.1 tcp dport 80 accept\nip saddr 180.122.84.1 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 195.11.165.27", "output": "ip saddr 195.11.165.27 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 159.193.222.157", "output": "ip saddr 159.193.222.157 tcp dport 80 accept\nip saddr 159.193.222.157 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 62.63.245.219", "output": "ip saddr 62.63.245.219 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8653, limit: 15/minute", "output": "tcp dport 8653 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 33.132.226.52", "output": "ip saddr 33.132.226.52 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 106.163.84.129", "output": "ip saddr 106.163.84.129 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 185.23.18.89", "output": "ip saddr 185.23.18.89 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 95, Log prefix: 'Alert: '", "output": "tcp dport 95 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 149.140.81.188", "output": "ip saddr 149.140.81.188 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 144.201.121.81", "output": "ip saddr 144.201.121.81 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4316, limit: 20/minute", "output": "tcp dport 4316 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7276, Log prefix: 'Log entry: '", "output": "tcp dport 7276 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 30.153.155.106", "output": "ip saddr 30.153.155.106 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 12.132.115.43", "output": "ip saddr 12.132.115.43 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2320, limit: 10/second", "output": "tcp dport 2320 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2084, limit: 15/minute", "output": "tcp dport 2084 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 125.192.139.45", "output": "ip saddr 125.192.139.45 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 193.163.229.177", "output": "ip saddr 193.163.229.177 tcp dport 80 accept\nip saddr 193.163.229.177 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7698, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7698 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 63.8.171.3", "output": "ip saddr 63.8.171.3 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 92.133.74.181", "output": "ip saddr 92.133.74.181 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6648, limit: 20/minute", "output": "tcp dport 6648 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 169.48.119.156", "output": "ip saddr 169.48.119.156 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8945, limit: 20/minute", "output": "tcp dport 8945 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 101.2.161.72", "output": "ip saddr 101.2.161.72 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 47.131.105.233", "output": "ip saddr 47.131.105.233 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5054, Log prefix: 'Log entry: '", "output": "tcp dport 5054 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 45, limit: 10/second", "output": "tcp dport 45 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 89.240.52.223", "output": "ip saddr 89.240.52.223 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 163.229.165.64", "output": "ip saddr 163.229.165.64 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 38.213.117.4", "output": "ip saddr 38.213.117.4 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 671", "output": "udp dport 671 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7476", "output": "udp dport 7476 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7812, Log prefix: 'Log entry: '", "output": "tcp dport 7812 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 89.98.93.36", "output": "ip saddr 89.98.93.36 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 94.13.213.70", "output": "ip saddr 94.13.213.70 tcp dport 80 accept\nip saddr 94.13.213.70 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 903", "output": "udp dport 903 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 17.32.61.31", "output": "ip saddr 17.32.61.31 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 111.126.177.47", "output": "ip saddr 111.126.177.47 tcp dport 80 accept\nip saddr 111.126.177.47 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7371, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7371 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 45.12.162.222", "output": "ip saddr 45.12.162.222 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6335, limit: 20/minute", "output": "tcp dport 6335 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 37.64.163.36", "output": "ip saddr 37.64.163.36 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4165, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4165 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 105.81.253.240", "output": "ip saddr 105.81.253.240 tcp dport 80 accept\nip saddr 105.81.253.240 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6659, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6659 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 46.122.176.246", "output": "ip saddr 46.122.176.246 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 183", "output": "udp dport 183 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3656, limit: 15/minute", "output": "tcp dport 3656 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2680, limit: 10/second", "output": "tcp dport 2680 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 31.232.89.150", "output": "ip saddr 31.232.89.150 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 565, limit: 5/second", "output": "tcp dport 565 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 26.252.90.85", "output": "ip saddr 26.252.90.85 tcp dport 80 accept\nip saddr 26.252.90.85 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3371", "output": "udp dport 3371 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1409, limit: 10/second", "output": "tcp dport 1409 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 194.35.33.181", "output": "ip saddr 194.35.33.181 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6264, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6264 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8045, limit: 20/minute", "output": "tcp dport 8045 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2994, Log prefix: 'Log entry: '", "output": "tcp dport 2994 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2087, Log prefix: 'Blocked attempt: '", "output": "tcp dport 2087 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 68.109.57.187", "output": "ip saddr 68.109.57.187 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 33.144.197.254", "output": "ip saddr 33.144.197.254 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 51.133.93.211", "output": "ip saddr 51.133.93.211 tcp dport 80 accept\nip saddr 51.133.93.211 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8836, Log prefix: 'Log entry: '", "output": "tcp dport 8836 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 743, Log prefix: 'Blocked attempt: '", "output": "tcp dport 743 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 59.87.185.196", "output": "ip saddr 59.87.185.196 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1794, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1794 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 66.177.4.61", "output": "ip saddr 66.177.4.61 tcp dport 80 accept\nip saddr 66.177.4.61 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 212.229.17.240", "output": "ip saddr 212.229.17.240 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 101.26.199.34", "output": "ip saddr 101.26.199.34 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 19.131.246.82", "output": "ip saddr 19.131.246.82 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1647, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1647 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4855, limit: 20/minute", "output": "tcp dport 4855 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 141.223.87.183", "output": "ip saddr 141.223.87.183 tcp dport 80 accept\nip saddr 141.223.87.183 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4553", "output": "udp dport 4553 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 15.177.2.82", "output": "ip saddr 15.177.2.82 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 33.242.188.188", "output": "ip saddr 33.242.188.188 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3577", "output": "udp dport 3577 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 487, limit: 10/second", "output": "tcp dport 487 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 45.32.148.58", "output": "ip saddr 45.32.148.58 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 822, Log prefix: 'Suspicious activity: '", "output": "tcp dport 822 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7307, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7307 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 135.203.44.19", "output": "ip saddr 135.203.44.19 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7840", "output": "udp dport 7840 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8952, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8952 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 201.62.157.179", "output": "ip saddr 201.62.157.179 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 71.226.166.210", "output": "ip saddr 71.226.166.210 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 41.80.173.17", "output": "ip saddr 41.80.173.17 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 946", "output": "udp dport 946 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3093, limit: 15/minute", "output": "tcp dport 3093 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4169, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4169 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 162.157.64.140", "output": "ip saddr 162.157.64.140 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 60.232.185.247", "output": "ip saddr 60.232.185.247 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5900, limit: 15/minute", "output": "tcp dport 5900 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4102, limit: 15/minute", "output": "tcp dport 4102 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 202.149.228.14", "output": "ip saddr 202.149.228.14 tcp dport 80 accept\nip saddr 202.149.228.14 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 76.109.75.22", "output": "ip saddr 76.109.75.22 tcp dport 80 accept\nip saddr 76.109.75.22 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2849", "output": "udp dport 2849 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2310", "output": "udp dport 2310 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6750, limit: 20/minute", "output": "tcp dport 6750 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 103.236.26.129", "output": "ip saddr 103.236.26.129 tcp dport 80 accept\nip saddr 103.236.26.129 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 191.105.246.87", "output": "ip saddr 191.105.246.87 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 102.81.220.103", "output": "ip saddr 102.81.220.103 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 54.130.61.61", "output": "ip saddr 54.130.61.61 tcp dport 80 accept\nip saddr 54.130.61.61 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 85.124.37.169", "output": "ip saddr 85.124.37.169 tcp dport 80 accept\nip saddr 85.124.37.169 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 177.71.71.232", "output": "ip saddr 177.71.71.232 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 176.57.48.134", "output": "ip saddr 176.57.48.134 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 486", "output": "udp dport 486 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1315, limit: 10/second", "output": "tcp dport 1315 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 105.216.55.104", "output": "ip saddr 105.216.55.104 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 171.75.56.79", "output": "ip saddr 171.75.56.79 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4551, Log prefix: 'Log entry: '", "output": "tcp dport 4551 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3991", "output": "udp dport 3991 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3240, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3240 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 175.66.30.119", "output": "ip saddr 175.66.30.119 tcp dport 80 accept\nip saddr 175.66.30.119 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 213.7.28.124", "output": "ip saddr 213.7.28.124 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 514, Log prefix: 'Suspicious activity: '", "output": "tcp dport 514 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 214.2.108.21", "output": "ip saddr 214.2.108.21 tcp dport 80 accept\nip saddr 214.2.108.21 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6801", "output": "udp dport 6801 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4825, limit: 5/second", "output": "tcp dport 4825 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 193.102.167.140", "output": "ip saddr 193.102.167.140 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 204.58.212.195", "output": "ip saddr 204.58.212.195 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 45.204.145.136", "output": "ip saddr 45.204.145.136 tcp dport 80 accept\nip saddr 45.204.145.136 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 74.139.210.75", "output": "ip saddr 74.139.210.75 tcp dport 80 accept\nip saddr 74.139.210.75 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 96.88.90.165", "output": "ip saddr 96.88.90.165 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 41.200.123.145", "output": "ip saddr 41.200.123.145 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 215.8.112.178", "output": "ip saddr 215.8.112.178 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 174.111.20.194", "output": "ip saddr 174.111.20.194 tcp dport 80 accept\nip saddr 174.111.20.194 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8241", "output": "udp dport 8241 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 207.51.104.86", "output": "ip saddr 207.51.104.86 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4295, limit: 10/second", "output": "tcp dport 4295 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 169.80.207.102", "output": "ip saddr 169.80.207.102 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4675, Log prefix: 'Blocked attempt: '", "output": "tcp dport 4675 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5988, limit: 20/minute", "output": "tcp dport 5988 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 131.129.0.51", "output": "ip saddr 131.129.0.51 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 14.251.29.16", "output": "ip saddr 14.251.29.16 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 215.133.236.249", "output": "ip saddr 215.133.236.249 tcp dport 80 accept\nip saddr 215.133.236.249 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3918, Log prefix: 'Log entry: '", "output": "tcp dport 3918 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 88.49.35.190", "output": "ip saddr 88.49.35.190 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5802", "output": "udp dport 5802 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5474, Log prefix: 'Log entry: '", "output": "tcp dport 5474 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 157.214.149.133", "output": "ip saddr 157.214.149.133 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4205, Log prefix: 'Log entry: '", "output": "tcp dport 4205 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 79.231.202.134", "output": "ip saddr 79.231.202.134 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 137.179.205.29", "output": "ip saddr 137.179.205.29 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 213.49.170.225", "output": "ip saddr 213.49.170.225 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 27.151.22.129", "output": "ip saddr 27.151.22.129 tcp dport 80 accept\nip saddr 27.151.22.129 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 69.228.114.142", "output": "ip saddr 69.228.114.142 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 45.218.180.90", "output": "ip saddr 45.218.180.90 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2019, limit: 10/second", "output": "tcp dport 2019 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7388", "output": "udp dport 7388 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8252, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8252 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2214, Log prefix: 'Blocked attempt: '", "output": "tcp dport 2214 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8823", "output": "udp dport 8823 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 124.248.209.174", "output": "ip saddr 124.248.209.174 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 156.97.71.95", "output": "ip saddr 156.97.71.95 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 160.33.93.70", "output": "ip saddr 160.33.93.70 tcp dport 80 accept\nip saddr 160.33.93.70 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 469, Log prefix: 'Suspicious activity: '", "output": "tcp dport 469 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 40.175.118.160", "output": "ip saddr 40.175.118.160 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8278, Log prefix: 'Log entry: '", "output": "tcp dport 8278 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 427", "output": "udp dport 427 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2148, limit: 20/minute", "output": "tcp dport 2148 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 78.117.205.176", "output": "ip saddr 78.117.205.176 tcp dport 80 accept\nip saddr 78.117.205.176 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 792, limit: 10/second", "output": "tcp dport 792 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3890, limit: 5/second", "output": "tcp dport 3890 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5599", "output": "udp dport 5599 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7483, limit: 10/second", "output": "tcp dport 7483 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 137.99.224.3", "output": "ip saddr 137.99.224.3 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7138, Log prefix: 'Log entry: '", "output": "tcp dport 7138 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 571", "output": "udp dport 571 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 87.152.182.118", "output": "ip saddr 87.152.182.118 tcp dport 80 accept\nip saddr 87.152.182.118 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 101.11.174.16", "output": "ip saddr 101.11.174.16 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 175.34.7.52", "output": "ip saddr 175.34.7.52 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 95.56.19.29", "output": "ip saddr 95.56.19.29 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 207.139.109.76", "output": "ip saddr 207.139.109.76 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6204, Log prefix: 'Log entry: '", "output": "tcp dport 6204 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2010, limit: 10/second", "output": "tcp dport 2010 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7715, limit: 5/second", "output": "tcp dport 7715 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1700, Log prefix: 'Alert: '", "output": "tcp dport 1700 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 47.61.122.240", "output": "ip saddr 47.61.122.240 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7304, Log prefix: 'Alert: '", "output": "tcp dport 7304 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 975", "output": "udp dport 975 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 199.53.171.183", "output": "ip saddr 199.53.171.183 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 28.116.147.100", "output": "ip saddr 28.116.147.100 tcp dport 80 accept\nip saddr 28.116.147.100 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 118.122.200.29", "output": "ip saddr 118.122.200.29 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7237, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7237 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 15.136.18.11", "output": "ip saddr 15.136.18.11 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 34.62.123.157", "output": "ip saddr 34.62.123.157 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3006", "output": "udp dport 3006 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3666", "output": "udp dport 3666 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4572, Log prefix: 'Log entry: '", "output": "tcp dport 4572 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 269, limit: 10/second", "output": "tcp dport 269 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3289, Log prefix: 'Alert: '", "output": "tcp dport 3289 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4069", "output": "udp dport 4069 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4519", "output": "udp dport 4519 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 118.163.206.235", "output": "ip saddr 118.163.206.235 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5787, limit: 20/minute", "output": "tcp dport 5787 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4617", "output": "udp dport 4617 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3478, Log prefix: 'Log entry: '", "output": "tcp dport 3478 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 32.220.228.9", "output": "ip saddr 32.220.228.9 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6363, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6363 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 136.184.80.60", "output": "ip saddr 136.184.80.60 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 197.10.28.53", "output": "ip saddr 197.10.28.53 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 158.18.125.212", "output": "ip saddr 158.18.125.212 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 79.88.126.32", "output": "ip saddr 79.88.126.32 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1510, Log prefix: 'Alert: '", "output": "tcp dport 1510 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 141.39.61.154", "output": "ip saddr 141.39.61.154 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7301, Log prefix: 'Log entry: '", "output": "tcp dport 7301 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 219.42.211.45", "output": "ip saddr 219.42.211.45 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8481, limit: 15/minute", "output": "tcp dport 8481 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3372, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3372 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8241, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8241 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8894, limit: 5/second", "output": "tcp dport 8894 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2557", "output": "udp dport 2557 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 212.44.181.2", "output": "ip saddr 212.44.181.2 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 75.65.153.207", "output": "ip saddr 75.65.153.207 tcp dport 80 accept\nip saddr 75.65.153.207 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5617, Log prefix: 'Blocked attempt: '", "output": "tcp dport 5617 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1415", "output": "udp dport 1415 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 372, Log prefix: 'Log entry: '", "output": "tcp dport 372 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1005, Log prefix: 'Log entry: '", "output": "tcp dport 1005 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 66.3.0.41", "output": "ip saddr 66.3.0.41 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3692, Log prefix: 'Suspicious activity: '", "output": "tcp dport 3692 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 654, Log prefix: 'Suspicious activity: '", "output": "tcp dport 654 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5346, Log prefix: 'Suspicious activity: '", "output": "tcp dport 5346 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6228, Log prefix: 'Log entry: '", "output": "tcp dport 6228 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 103.222.143.149", "output": "ip saddr 103.222.143.149 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 162.38.154.147", "output": "ip saddr 162.38.154.147 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 202.88.25.32", "output": "ip saddr 202.88.25.32 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 73.74.103.0", "output": "ip saddr 73.74.103.0 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8531, Log prefix: 'Log entry: '", "output": "tcp dport 8531 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 191.183.67.246", "output": "ip saddr 191.183.67.246 tcp dport 80 accept\nip saddr 191.183.67.246 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2480, limit: 20/minute", "output": "tcp dport 2480 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 18.190.157.83", "output": "ip saddr 18.190.157.83 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 83.136.29.240", "output": "ip saddr 83.136.29.240 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 221.127.127.187", "output": "ip saddr 221.127.127.187 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 73.67.176.220", "output": "ip saddr 73.67.176.220 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2523, Log prefix: 'Alert: '", "output": "tcp dport 2523 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5926, limit: 15/minute", "output": "tcp dport 5926 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 31.249.198.52", "output": "ip saddr 31.249.198.52 tcp dport 80 accept\nip saddr 31.249.198.52 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 12.181.7.128", "output": "ip saddr 12.181.7.128 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 89.17.217.149", "output": "ip saddr 89.17.217.149 tcp dport 80 accept\nip saddr 89.17.217.149 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 59.26.74.29", "output": "ip saddr 59.26.74.29 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1964", "output": "udp dport 1964 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1142, limit: 10/second", "output": "tcp dport 1142 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 96.23.164.190", "output": "ip saddr 96.23.164.190 tcp dport 80 accept\nip saddr 96.23.164.190 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1567, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1567 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2514", "output": "udp dport 2514 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 365, limit: 10/second", "output": "tcp dport 365 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 162.123.160.19", "output": "ip saddr 162.123.160.19 tcp dport 80 accept\nip saddr 162.123.160.19 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 201.181.25.11", "output": "ip saddr 201.181.25.11 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 55.152.117.214", "output": "ip saddr 55.152.117.214 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 191.96.159.171", "output": "ip saddr 191.96.159.171 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 35, Log prefix: 'Blocked attempt: '", "output": "tcp dport 35 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7835", "output": "udp dport 7835 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8272, limit: 5/second", "output": "tcp dport 8272 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 214.171.86.131", "output": "ip saddr 214.171.86.131 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 120.235.119.132", "output": "ip saddr 120.235.119.132 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6059", "output": "udp dport 6059 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 87.251.216.231", "output": "ip saddr 87.251.216.231 tcp dport 80 accept\nip saddr 87.251.216.231 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3857, limit: 10/second", "output": "tcp dport 3857 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7496", "output": "udp dport 7496 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5303, Log prefix: 'Log entry: '", "output": "tcp dport 5303 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 11.152.207.163", "output": "ip saddr 11.152.207.163 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 107.85.67.167", "output": "ip saddr 107.85.67.167 tcp dport 80 accept\nip saddr 107.85.67.167 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3064", "output": "udp dport 3064 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5973, Log prefix: 'Blocked attempt: '", "output": "tcp dport 5973 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 213.210.246.141", "output": "ip saddr 213.210.246.141 tcp dport 80 accept\nip saddr 213.210.246.141 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 321, Log prefix: 'Alert: '", "output": "tcp dport 321 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1199, Log prefix: 'Alert: '", "output": "tcp dport 1199 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8937", "output": "udp dport 8937 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 41.185.150.205", "output": "ip saddr 41.185.150.205 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7676, Log prefix: 'Alert: '", "output": "tcp dport 7676 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 153.92.55.36", "output": "ip saddr 153.92.55.36 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8356, Log prefix: 'Log entry: '", "output": "tcp dport 8356 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3996, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3996 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5451, Log prefix: 'Alert: '", "output": "tcp dport 5451 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 78.247.128.200", "output": "ip saddr 78.247.128.200 tcp dport 80 accept\nip saddr 78.247.128.200 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2608, limit: 15/minute", "output": "tcp dport 2608 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 45.124.61.209", "output": "ip saddr 45.124.61.209 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 74.139.222.118", "output": "ip saddr 74.139.222.118 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 208.114.209.131", "output": "ip saddr 208.114.209.131 tcp dport 80 accept\nip saddr 208.114.209.131 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3407, Log prefix: 'Suspicious activity: '", "output": "tcp dport 3407 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 11.149.52.57", "output": "ip saddr 11.149.52.57 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3872, Log prefix: 'Suspicious activity: '", "output": "tcp dport 3872 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 155.182.214.82", "output": "ip saddr 155.182.214.82 tcp dport 80 accept\nip saddr 155.182.214.82 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 221.208.72.162", "output": "ip saddr 221.208.72.162 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 79.108.225.29", "output": "ip saddr 79.108.225.29 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2587, Log prefix: 'Blocked attempt: '", "output": "tcp dport 2587 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5633, limit: 20/minute", "output": "tcp dport 5633 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7036, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7036 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 293", "output": "udp dport 293 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2145, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2145 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 138.28.38.160", "output": "ip saddr 138.28.38.160 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 60.181.232.73", "output": "ip saddr 60.181.232.73 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 785, Log prefix: 'Suspicious activity: '", "output": "tcp dport 785 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 111.132.90.25", "output": "ip saddr 111.132.90.25 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 135.196.113.81", "output": "ip saddr 135.196.113.81 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 22.9.113.73", "output": "ip saddr 22.9.113.73 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 179.193.103.95", "output": "ip saddr 179.193.103.95 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 14.154.65.147", "output": "ip saddr 14.154.65.147 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6951", "output": "udp dport 6951 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 105.181.51.85", "output": "ip saddr 105.181.51.85 tcp dport 80 accept\nip saddr 105.181.51.85 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8263", "output": "udp dport 8263 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8567", "output": "udp dport 8567 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 100.108.116.39", "output": "ip saddr 100.108.116.39 tcp dport 80 accept\nip saddr 100.108.116.39 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1287", "output": "udp dport 1287 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6208, limit: 10/second", "output": "tcp dport 6208 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8257, limit: 10/second", "output": "tcp dport 8257 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 835, Log prefix: 'Log entry: '", "output": "tcp dport 835 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5185, limit: 10/second", "output": "tcp dport 5185 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 153.84.42.87", "output": "ip saddr 153.84.42.87 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7662, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7662 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4749", "output": "udp dport 4749 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8283", "output": "udp dport 8283 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 584", "output": "udp dport 584 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7648, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7648 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 191.84.57.146", "output": "ip saddr 191.84.57.146 tcp dport 80 accept\nip saddr 191.84.57.146 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3255, Log prefix: 'Log entry: '", "output": "tcp dport 3255 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8997, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8997 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 929", "output": "udp dport 929 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 74.174.110.47", "output": "ip saddr 74.174.110.47 tcp dport 80 accept\nip saddr 74.174.110.47 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 178.101.55.240", "output": "ip saddr 178.101.55.240 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 187.177.59.140", "output": "ip saddr 187.177.59.140 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 66.4.113.234", "output": "ip saddr 66.4.113.234 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 74.81.79.12", "output": "ip saddr 74.81.79.12 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7516, Log prefix: 'Alert: '", "output": "tcp dport 7516 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 180.72.131.7", "output": "ip saddr 180.72.131.7 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 150.43.169.89", "output": "ip saddr 150.43.169.89 tcp dport 80 accept\nip saddr 150.43.169.89 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 181.200.143.8", "output": "ip saddr 181.200.143.8 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1434, Log prefix: 'Log entry: '", "output": "tcp dport 1434 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 16.5.160.72", "output": "ip saddr 16.5.160.72 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 166.47.220.75", "output": "ip saddr 166.47.220.75 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4995, limit: 20/minute", "output": "tcp dport 4995 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 172.71.56.158", "output": "ip saddr 172.71.56.158 tcp dport 80 accept\nip saddr 172.71.56.158 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1388, Log prefix: 'Alert: '", "output": "tcp dport 1388 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4649, Log prefix: 'Alert: '", "output": "tcp dport 4649 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4867, Log prefix: 'Alert: '", "output": "tcp dport 4867 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 187.208.235.122", "output": "ip saddr 187.208.235.122 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6446, Log prefix: 'Alert: '", "output": "tcp dport 6446 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 23.226.178.110", "output": "ip saddr 23.226.178.110 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3137", "output": "udp dport 3137 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1384, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1384 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 212.37.204.245", "output": "ip saddr 212.37.204.245 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3591, Log prefix: 'Suspicious activity: '", "output": "tcp dport 3591 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5198, Log prefix: 'Log entry: '", "output": "tcp dport 5198 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7249, limit: 5/second", "output": "tcp dport 7249 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 915, Log prefix: 'Log entry: '", "output": "tcp dport 915 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5967, Log prefix: 'Alert: '", "output": "tcp dport 5967 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 81.125.214.154", "output": "ip saddr 81.125.214.154 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3175, limit: 5/second", "output": "tcp dport 3175 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7593, limit: 5/second", "output": "tcp dport 7593 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 114.227.151.201", "output": "ip saddr 114.227.151.201 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3203, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3203 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 20.216.174.215", "output": "ip saddr 20.216.174.215 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2277", "output": "udp dport 2277 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 222.120.171.122", "output": "ip saddr 222.120.171.122 tcp dport 80 accept\nip saddr 222.120.171.122 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6574, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6574 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 148.208.199.133", "output": "ip saddr 148.208.199.133 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 216.22.242.99", "output": "ip saddr 216.22.242.99 tcp dport 80 accept\nip saddr 216.22.242.99 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2154, limit: 10/second", "output": "tcp dport 2154 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5442", "output": "udp dport 5442 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4845", "output": "udp dport 4845 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 174.217.244.12", "output": "ip saddr 174.217.244.12 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 87.184.73.244", "output": "ip saddr 87.184.73.244 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6722, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6722 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 14.105.246.204", "output": "ip saddr 14.105.246.204 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1012", "output": "udp dport 1012 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 168.179.0.250", "output": "ip saddr 168.179.0.250 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3619, limit: 15/minute", "output": "tcp dport 3619 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 92.168.50.65", "output": "ip saddr 92.168.50.65 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8233, limit: 5/second", "output": "tcp dport 8233 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4819, Log prefix: 'Blocked attempt: '", "output": "tcp dport 4819 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2701, Log prefix: 'Blocked attempt: '", "output": "tcp dport 2701 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2342, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2342 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 27.45.42.20", "output": "ip saddr 27.45.42.20 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1876", "output": "udp dport 1876 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 93.2.33.72", "output": "ip saddr 93.2.33.72 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 177.236.88.54", "output": "ip saddr 177.236.88.54 tcp dport 80 accept\nip saddr 177.236.88.54 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 463, Log prefix: 'Alert: '", "output": "tcp dport 463 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 91.177.126.222", "output": "ip saddr 91.177.126.222 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 88.169.129.155", "output": "ip saddr 88.169.129.155 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 58.45.117.41", "output": "ip saddr 58.45.117.41 tcp dport 80 accept\nip saddr 58.45.117.41 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 188.11.245.68", "output": "ip saddr 188.11.245.68 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 176.254.201.148", "output": "ip saddr 176.254.201.148 tcp dport 80 accept\nip saddr 176.254.201.148 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8342, limit: 5/second", "output": "tcp dport 8342 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7566, Log prefix: 'Log entry: '", "output": "tcp dport 7566 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3736, Log prefix: 'Log entry: '", "output": "tcp dport 3736 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 928, Log prefix: 'Alert: '", "output": "tcp dport 928 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 54.129.4.5", "output": "ip saddr 54.129.4.5 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 125.67.247.23", "output": "ip saddr 125.67.247.23 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 22.236.57.38", "output": "ip saddr 22.236.57.38 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 186.79.132.111", "output": "ip saddr 186.79.132.111 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 101.202.185.132", "output": "ip saddr 101.202.185.132 tcp dport 80 accept\nip saddr 101.202.185.132 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8340, limit: 5/second", "output": "tcp dport 8340 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 758, Log prefix: 'Log entry: '", "output": "tcp dport 758 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 85.45.35.8", "output": "ip saddr 85.45.35.8 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 182.203.98.249", "output": "ip saddr 182.203.98.249 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6431, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6431 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3337, limit: 15/minute", "output": "tcp dport 3337 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 155.165.102.63", "output": "ip saddr 155.165.102.63 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5374, Log prefix: 'Blocked attempt: '", "output": "tcp dport 5374 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8338, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8338 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2922, limit: 20/minute", "output": "tcp dport 2922 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3180", "output": "udp dport 3180 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5430", "output": "udp dport 5430 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1736, limit: 10/second", "output": "tcp dport 1736 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7743", "output": "udp dport 7743 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 116.26.82.208", "output": "ip saddr 116.26.82.208 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5276", "output": "udp dport 5276 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8029, limit: 15/minute", "output": "tcp dport 8029 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8511, limit: 20/minute", "output": "tcp dport 8511 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8325, Log prefix: 'Blocked attempt: '", "output": "tcp dport 8325 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 124.254.151.249", "output": "ip saddr 124.254.151.249 tcp dport 80 accept\nip saddr 124.254.151.249 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 206.107.208.230", "output": "ip saddr 206.107.208.230 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1503, Log prefix: 'Alert: '", "output": "tcp dport 1503 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4635, limit: 10/second", "output": "tcp dport 4635 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8357, limit: 15/minute", "output": "tcp dport 8357 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1201, limit: 20/minute", "output": "tcp dport 1201 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2831, Log prefix: 'Log entry: '", "output": "tcp dport 2831 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 161.35.107.81", "output": "ip saddr 161.35.107.81 tcp dport 80 accept\nip saddr 161.35.107.81 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 43.67.80.254", "output": "ip saddr 43.67.80.254 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 142.239.200.108", "output": "ip saddr 142.239.200.108 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 130.206.80.235", "output": "ip saddr 130.206.80.235 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1940", "output": "udp dport 1940 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2516", "output": "udp dport 2516 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 201.60.129.196", "output": "ip saddr 201.60.129.196 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1346, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1346 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 206.51.143.201", "output": "ip saddr 206.51.143.201 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4444, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4444 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5831, limit: 10/second", "output": "tcp dport 5831 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8234", "output": "udp dport 8234 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4260, Log prefix: 'Suspicious activity: '", "output": "tcp dport 4260 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 118.121.255.231", "output": "ip saddr 118.121.255.231 tcp dport 80 accept\nip saddr 118.121.255.231 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 46.16.167.104", "output": "ip saddr 46.16.167.104 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 125.9.5.105", "output": "ip saddr 125.9.5.105 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6373", "output": "udp dport 6373 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 80.215.96.198", "output": "ip saddr 80.215.96.198 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1946, Log prefix: 'Alert: '", "output": "tcp dport 1946 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3883, Log prefix: 'Log entry: '", "output": "tcp dport 3883 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 213.23.186.255", "output": "ip saddr 213.23.186.255 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7603, Log prefix: 'Alert: '", "output": "tcp dport 7603 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 23.155.168.98", "output": "ip saddr 23.155.168.98 tcp dport 80 accept\nip saddr 23.155.168.98 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 78.27.180.157", "output": "ip saddr 78.27.180.157 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7701, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7701 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6219", "output": "udp dport 6219 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 12.109.70.14", "output": "ip saddr 12.109.70.14 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4896, limit: 5/second", "output": "tcp dport 4896 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2312", "output": "udp dport 2312 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 161.171.227.135", "output": "ip saddr 161.171.227.135 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 128.221.249.150", "output": "ip saddr 128.221.249.150 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6426, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6426 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3136, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3136 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5403, Log prefix: 'Blocked attempt: '", "output": "tcp dport 5403 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4609", "output": "udp dport 4609 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 152.29.235.161", "output": "ip saddr 152.29.235.161 tcp dport 80 accept\nip saddr 152.29.235.161 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 11.217.113.35", "output": "ip saddr 11.217.113.35 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 176.11.82.91", "output": "ip saddr 176.11.82.91 tcp dport 80 accept\nip saddr 176.11.82.91 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5336, Log prefix: 'Alert: '", "output": "tcp dport 5336 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6317, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6317 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 164.38.111.157", "output": "ip saddr 164.38.111.157 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6973, limit: 20/minute", "output": "tcp dport 6973 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7095, Log prefix: 'Log entry: '", "output": "tcp dport 7095 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8630, Log prefix: 'Alert: '", "output": "tcp dport 8630 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 154.173.236.72", "output": "ip saddr 154.173.236.72 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5047, Log prefix: 'Alert: '", "output": "tcp dport 5047 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 152.58.69.227", "output": "ip saddr 152.58.69.227 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7284, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7284 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6627, limit: 5/second", "output": "tcp dport 6627 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 176.219.191.83", "output": "ip saddr 176.219.191.83 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 147.151.105.218", "output": "ip saddr 147.151.105.218 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4230, Log prefix: 'Blocked attempt: '", "output": "tcp dport 4230 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5237", "output": "udp dport 5237 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 129.25.85.156", "output": "ip saddr 129.25.85.156 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 49.47.91.206", "output": "ip saddr 49.47.91.206 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 185.107.117.203", "output": "ip saddr 185.107.117.203 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6652, Log prefix: 'Alert: '", "output": "tcp dport 6652 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3265, Log prefix: 'Alert: '", "output": "tcp dport 3265 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 648, Log prefix: 'Suspicious activity: '", "output": "tcp dport 648 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 744", "output": "udp dport 744 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 208.186.238.60", "output": "ip saddr 208.186.238.60 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 129.54.185.225", "output": "ip saddr 129.54.185.225 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2377, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2377 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 174.84.35.165", "output": "ip saddr 174.84.35.165 tcp dport 80 accept\nip saddr 174.84.35.165 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2855, Log prefix: 'Log entry: '", "output": "tcp dport 2855 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 46.231.105.3", "output": "ip saddr 46.231.105.3 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5197, Log prefix: 'Alert: '", "output": "tcp dport 5197 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4305, Log prefix: 'Alert: '", "output": "tcp dport 4305 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 157.36.236.199", "output": "ip saddr 157.36.236.199 tcp dport 80 accept\nip saddr 157.36.236.199 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 86.215.96.252", "output": "ip saddr 86.215.96.252 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 543, limit: 10/second", "output": "tcp dport 543 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5078, Log prefix: 'Suspicious activity: '", "output": "tcp dport 5078 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 83.225.75.97", "output": "ip saddr 83.225.75.97 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1438, Log prefix: 'Suspicious activity: '", "output": "tcp dport 1438 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 69.222.78.59", "output": "ip saddr 69.222.78.59 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4204", "output": "udp dport 4204 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 72.47.72.124", "output": "ip saddr 72.47.72.124 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 177, Log prefix: 'Alert: '", "output": "tcp dport 177 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 171.47.212.1", "output": "ip saddr 171.47.212.1 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8974, limit: 5/second", "output": "tcp dport 8974 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3056, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3056 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 982, Log prefix: 'Log entry: '", "output": "tcp dport 982 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 212.34.36.200", "output": "ip saddr 212.34.36.200 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 55.16.157.171", "output": "ip saddr 55.16.157.171 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 81.218.101.83", "output": "ip saddr 81.218.101.83 tcp dport 80 accept\nip saddr 81.218.101.83 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 85.194.63.239", "output": "ip saddr 85.194.63.239 tcp dport 80 accept\nip saddr 85.194.63.239 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1133, Log prefix: 'Log entry: '", "output": "tcp dport 1133 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1321, Log prefix: 'Alert: '", "output": "tcp dport 1321 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2773", "output": "udp dport 2773 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1591, Log prefix: 'Log entry: '", "output": "tcp dport 1591 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3317, Log prefix: 'Alert: '", "output": "tcp dport 3317 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3272, Log prefix: 'Suspicious activity: '", "output": "tcp dport 3272 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 193.28.146.253", "output": "ip saddr 193.28.146.253 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 42.173.152.144", "output": "ip saddr 42.173.152.144 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 71.172.126.104", "output": "ip saddr 71.172.126.104 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3986, limit: 20/minute", "output": "tcp dport 3986 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4561, Log prefix: 'Blocked attempt: '", "output": "tcp dport 4561 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 212.41.146.87", "output": "ip saddr 212.41.146.87 tcp dport 80 accept\nip saddr 212.41.146.87 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7527, limit: 20/minute", "output": "tcp dport 7527 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6652, limit: 5/second", "output": "tcp dport 6652 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 24.148.190.175", "output": "ip saddr 24.148.190.175 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 139.170.30.0", "output": "ip saddr 139.170.30.0 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 123.234.235.134", "output": "ip saddr 123.234.235.134 tcp dport 80 accept\nip saddr 123.234.235.134 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 139.229.185.6", "output": "ip saddr 139.229.185.6 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4411, limit: 20/minute", "output": "tcp dport 4411 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 12.180.247.126", "output": "ip saddr 12.180.247.126 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 15.51.36.218", "output": "ip saddr 15.51.36.218 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2452, limit: 10/second", "output": "tcp dport 2452 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 39.211.19.68", "output": "ip saddr 39.211.19.68 tcp dport 80 accept\nip saddr 39.211.19.68 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5758, Log prefix: 'Suspicious activity: '", "output": "tcp dport 5758 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 58.115.117.59", "output": "ip saddr 58.115.117.59 tcp dport 80 accept\nip saddr 58.115.117.59 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5890, Log prefix: 'Suspicious activity: '", "output": "tcp dport 5890 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2940, Log prefix: 'Blocked attempt: '", "output": "tcp dport 2940 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6970, limit: 15/minute", "output": "tcp dport 6970 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7791, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7791 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2445, Log prefix: 'Log entry: '", "output": "tcp dport 2445 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7852, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7852 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 86.87.113.164", "output": "ip saddr 86.87.113.164 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2917, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2917 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1883, limit: 15/minute", "output": "tcp dport 1883 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 199.254.48.200", "output": "ip saddr 199.254.48.200 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4108, Log prefix: 'Alert: '", "output": "tcp dport 4108 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 765, Log prefix: 'Suspicious activity: '", "output": "tcp dport 765 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 71.114.108.90", "output": "ip saddr 71.114.108.90 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 186.37.172.146", "output": "ip saddr 186.37.172.146 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 116.18.132.175", "output": "ip saddr 116.18.132.175 tcp dport 80 accept\nip saddr 116.18.132.175 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7471, Log prefix: 'Log entry: '", "output": "tcp dport 7471 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5916, Log prefix: 'Blocked attempt: '", "output": "tcp dport 5916 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1343, Log prefix: 'Log entry: '", "output": "tcp dport 1343 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 27.204.19.34", "output": "ip saddr 27.204.19.34 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 5747, limit: 20/minute", "output": "tcp dport 5747 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2725, limit: 15/minute", "output": "tcp dport 2725 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2677", "output": "udp dport 2677 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 134.189.204.112", "output": "ip saddr 134.189.204.112 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1549, Log prefix: 'Blocked attempt: '", "output": "tcp dport 1549 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 496, limit: 15/minute", "output": "tcp dport 496 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 6455", "output": "udp dport 6455 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 219.1.147.195", "output": "ip saddr 219.1.147.195 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 222.1.232.194", "output": "ip saddr 222.1.232.194 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 177.47.151.167", "output": "ip saddr 177.47.151.167 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6885, limit: 15/minute", "output": "tcp dport 6885 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2916, Log prefix: 'Alert: '", "output": "tcp dport 2916 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 3016", "output": "udp dport 3016 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 425, limit: 10/second", "output": "tcp dport 425 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 201.226.102.196", "output": "ip saddr 201.226.102.196 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 164.149.186.27", "output": "ip saddr 164.149.186.27 tcp dport 80 accept\nip saddr 164.149.186.27 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 175.136.135.205", "output": "ip saddr 175.136.135.205 tcp dport 80 accept\nip saddr 175.136.135.205 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 95.221.235.34", "output": "ip saddr 95.221.235.34 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 183.77.120.151", "output": "ip saddr 183.77.120.151 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 3911, limit: 10/second", "output": "tcp dport 3911 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 136.61.240.247", "output": "ip saddr 136.61.240.247 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6975, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6975 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 138.231.159.171", "output": "ip saddr 138.231.159.171 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 193.100.174.32", "output": "ip saddr 193.100.174.32 tcp dport 80 accept\nip saddr 193.100.174.32 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 465, Log prefix: 'Alert: '", "output": "tcp dport 465 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8294, Log prefix: 'Log entry: '", "output": "tcp dport 8294 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 117.61.230.218", "output": "ip saddr 117.61.230.218 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 189.54.119.17", "output": "ip saddr 189.54.119.17 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 4221, Log prefix: 'Alert: '", "output": "tcp dport 4221 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4645, Log prefix: 'Blocked attempt: '", "output": "tcp dport 4645 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 206.170.143.210", "output": "ip saddr 206.170.143.210 tcp dport 80 accept\nip saddr 206.170.143.210 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 202.237.117.78", "output": "ip saddr 202.237.117.78 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 174.9.247.94", "output": "ip saddr 174.9.247.94 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 164.162.90.212", "output": "ip saddr 164.162.90.212 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 538, Log prefix: 'Suspicious activity: '", "output": "tcp dport 538 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 161.140.59.208", "output": "ip saddr 161.140.59.208 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 122.174.252.41", "output": "ip saddr 122.174.252.41 tcp dport 80 accept\nip saddr 122.174.252.41 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 84.54.204.128", "output": "ip saddr 84.54.204.128 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 215.215.155.200", "output": "ip saddr 215.215.155.200 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 27.107.77.186", "output": "ip saddr 27.107.77.186 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 128.177.234.214", "output": "ip saddr 128.177.234.214 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 4542, Log prefix: 'Alert: '", "output": "tcp dport 4542 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 71.85.181.61", "output": "ip saddr 71.85.181.61 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 60.66.176.33", "output": "ip saddr 60.66.176.33 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 8950, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8950 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 159.157.129.206", "output": "ip saddr 159.157.129.206 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1316, Log prefix: 'Alert: '", "output": "tcp dport 1316 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 2264, Log prefix: 'Log entry: '", "output": "tcp dport 2264 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 101.79.73.114", "output": "ip saddr 101.79.73.114 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 49.122.13.249", "output": "ip saddr 49.122.13.249 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 143.151.196.82", "output": "ip saddr 143.151.196.82 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6093, Log prefix: 'Suspicious activity: '", "output": "tcp dport 6093 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5323, Log prefix: 'Alert: '", "output": "tcp dport 5323 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 190.7.141.171", "output": "ip saddr 190.7.141.171 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4646, limit: 10/second", "output": "tcp dport 4646 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 4395, limit: 5/second", "output": "tcp dport 4395 ct state new limit rate 5/second accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 173.35.11.149", "output": "ip saddr 173.35.11.149 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 144.3.111.12", "output": "ip saddr 144.3.111.12 tcp dport 80 accept\nip saddr 144.3.111.12 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 46.8.183.251", "output": "ip saddr 46.8.183.251 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5365, Log prefix: 'Blocked attempt: '", "output": "tcp dport 5365 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7697, Log prefix: 'Log entry: '", "output": "tcp dport 7697 log prefix \"Log entry: \" reject"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 290, limit: 15/minute", "output": "tcp dport 290 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 144.128.24.120", "output": "ip saddr 144.128.24.120 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 7506, limit: 20/minute", "output": "tcp dport 7506 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 2411", "output": "udp dport 2411 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 149.32.221.62", "output": "ip saddr 149.32.221.62 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3710, Log prefix: 'Suspicious activity: '", "output": "tcp dport 3710 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 174.234.187.32", "output": "ip saddr 174.234.187.32 tcp dport 80 accept\nip saddr 174.234.187.32 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 56.67.188.76", "output": "ip saddr 56.67.188.76 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 8353", "output": "udp dport 8353 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 79.157.188.227", "output": "ip saddr 79.157.188.227 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 33.27.182.110", "output": "ip saddr 33.27.182.110 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 204.75.197.21", "output": "ip saddr 204.75.197.21 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 129.191.112.74", "output": "ip saddr 129.191.112.74 tcp dport 80 accept\nip saddr 129.191.112.74 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 184.239.16.89", "output": "ip saddr 184.239.16.89 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2548, Log prefix: 'Suspicious activity: '", "output": "tcp dport 2548 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 149.68.147.93", "output": "ip saddr 149.68.147.93 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 69.137.2.81", "output": "ip saddr 69.137.2.81 drop"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8399, limit: 20/minute", "output": "tcp dport 8399 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 1216, limit: 15/minute", "output": "tcp dport 1216 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 2361, limit: 10/second", "output": "tcp dport 2361 ct state new limit rate 10/second accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1207, Log prefix: 'Alert: '", "output": "tcp dport 1207 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6145, limit: 15/minute", "output": "tcp dport 6145 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 120.251.93.150", "output": "ip saddr 120.251.93.150 tcp dport 80 accept\nip saddr 120.251.93.150 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 181.172.176.231", "output": "ip saddr 181.172.176.231 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 43.101.74.166", "output": "ip saddr 43.101.74.166 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7655, Log prefix: 'Alert: '", "output": "tcp dport 7655 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 220.111.244.162", "output": "ip saddr 220.111.244.162 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 950, Log prefix: 'Blocked attempt: '", "output": "tcp dport 950 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 220.168.59.118", "output": "ip saddr 220.168.59.118 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 4396", "output": "udp dport 4396 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 8272, limit: 15/minute", "output": "tcp dport 8272 ct state new limit rate 15/minute accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 142.162.92.63", "output": "ip saddr 142.162.92.63 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7853, Log prefix: 'Blocked attempt: '", "output": "tcp dport 7853 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 82.189.203.232", "output": "ip saddr 82.189.203.232 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6238, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6238 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 537, Log prefix: 'Blocked attempt: '", "output": "tcp dport 537 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 291, limit: 20/minute", "output": "tcp dport 291 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 200.111.178.238", "output": "ip saddr 200.111.178.238 tcp dport 80 accept\nip saddr 200.111.178.238 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 95.171.177.191", "output": "ip saddr 95.171.177.191 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1995, Log prefix: 'Blocked attempt: '", "output": "tcp dport 1995 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 5802, Log prefix: 'Alert: '", "output": "tcp dport 5802 log prefix \"Alert: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 3601, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3601 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 57.33.107.138", "output": "ip saddr 57.33.107.138 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 198.236.238.77", "output": "ip saddr 198.236.238.77 tcp dport 80 accept\nip saddr 198.236.238.77 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 19.45.178.203", "output": "ip saddr 19.45.178.203 tcp dport 80 accept\nip saddr 19.45.178.203 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 161.234.34.199", "output": "ip saddr 161.234.34.199 tcp dport 80 accept\nip saddr 161.234.34.199 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 173.199.214.124", "output": "ip saddr 173.199.214.124 tcp dport 80 accept\nip saddr 173.199.214.124 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 180.211.129.252", "output": "ip saddr 180.211.129.252 drop"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 132.81.54.37", "output": "ip saddr 132.81.54.37 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 121.137.129.62", "output": "ip saddr 121.137.129.62 tcp dport 80 accept\nip saddr 121.137.129.62 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 39.229.79.178", "output": "ip saddr 39.229.79.178 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting.", "input": "Port: 6774, limit: 20/minute", "output": "tcp dport 6774 ct state new limit rate 20/minute accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 1895, Log prefix: 'Log entry: '", "output": "tcp dport 1895 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 143.131.5.62", "output": "ip saddr 143.131.5.62 tcp dport 80 accept\nip saddr 143.131.5.62 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 1578, Log prefix: 'Alert: '", "output": "tcp dport 1578 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 222.164.107.228", "output": "ip saddr 222.164.107.228 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 83.13.114.176", "output": "ip saddr 83.13.114.176 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3427, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3427 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 305, Log prefix: 'Log entry: '", "output": "tcp dport 305 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 5175", "output": "udp dport 5175 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 6679, Log prefix: 'Log entry: '", "output": "tcp dport 6679 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6071, Log prefix: 'Blocked attempt: '", "output": "tcp dport 6071 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8769, Log prefix: 'Alert: '", "output": "tcp dport 8769 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 7991, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7991 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8397, Log prefix: 'Alert: '", "output": "tcp dport 8397 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 182.83.33.147", "output": "ip saddr 182.83.33.147 drop"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 3543, Log prefix: 'Blocked attempt: '", "output": "tcp dport 3543 log prefix \"Blocked attempt: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 215.182.125.128", "output": "ip saddr 215.182.125.128 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 5969, Log prefix: 'Suspicious activity: '", "output": "tcp dport 5969 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 136.153.67.117", "output": "ip saddr 136.153.67.117 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 46.178.139.166", "output": "ip saddr 46.178.139.166 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 69.69.39.180", "output": "ip saddr 69.69.39.180 drop"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 217.107.177.160", "output": "ip saddr 217.107.177.160 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1871", "output": "udp dport 1871 accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7467, Log prefix: 'Suspicious activity: '", "output": "tcp dport 7467 log prefix \"Suspicious activity: \" accept"}
+{"instruction": "Generate a nftables rule that log all incoming connections on a specific port.", "input": "Port: 7215, Log prefix: 'Log entry: '", "output": "tcp dport 7215 log prefix \"Log entry: \" accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 164.87.116.142", "output": "ip saddr 164.87.116.142 drop"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 7979", "output": "udp dport 7979 accept"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1407", "output": "udp dport 1407 accept"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 45.195.206.27", "output": "ip saddr 45.195.206.27 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop SMTP traffic from a known spammer IP.", "input": "IP: 212.95.167.63", "output": "ip saddr 212.95.167.63 tcp dport 25 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 8670, Log prefix: 'Suspicious activity: '", "output": "tcp dport 8670 log prefix \"Suspicious activity: \" reject"}
+{"instruction": "Generate a nftables rule that accept DNS traffic from a trusted IP.", "input": "Trusted IP: 127.207.252.67", "output": "ip saddr 127.207.252.67 udp dport 53 accept"}
+{"instruction": "Generate a nftables rule that drop all packets from a specific IP address.", "input": "IP: 74.190.13.186", "output": "ip saddr 74.190.13.186 drop"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2932, Log prefix: 'Blocked attempt: '", "output": "tcp dport 2932 log prefix \"Blocked attempt: \" reject"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 144.103.86.195", "output": "ip saddr 144.103.86.195 tcp dport 80 accept\nip saddr 144.103.86.195 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 2809, Log prefix: 'Alert: '", "output": "tcp dport 2809 log prefix \"Alert: \" reject"}
+{"instruction": "Generate a nftables rule that allow UDP traffic on a custom port.", "input": "Port: 1895", "output": "udp dport 1895 accept"}
+{"instruction": "Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP.", "input": "Source IP: 120.218.118.235", "output": "ip saddr 120.218.118.235 tcp dport 80 accept\nip saddr 120.218.118.235 tcp dport 443 accept"}
+{"instruction": "Generate a nftables rule that log and reject TCP traffic to a specific port.", "input": "Port: 6337, Log prefix: 'Alert: '", "output": "tcp dport 6337 log prefix \"Alert: \" reject"}

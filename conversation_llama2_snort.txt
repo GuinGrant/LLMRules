@@ -1,0 +1,351 @@
+Output 1:
+User Input:
+Write a Snort rule to detect TCP SYN-FIN flood attack.
+
+Model Output:
+Write a Snort rule to detect TCP SYN-FIN flood attack. фев 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 2020 · Snort rule to detect TCP SYN-FIN flood attack. Feb 10, 202
+==================================================
+
+Output 2:
+User Input:
+Write a Snort rule to alert TCP packets from source port 2862
+
+Model Output:
+Write a Snort rule to alert TCP packets from source port 28629
+ nobodyhome
+Write a Snort rule to alert TCP packets from source port 28629 with a stateless flow and to detect possible SQL injection.
+==================================================
+
+Output 3:
+User Input:
+Write a Snort rule to detect ICMP Echo Request (ping) flood.
+
+Model Output:
+Write a Snort rule to detect ICMP Echo Request (ping) flood. hopefully this rule can be of some help for those who face it.
+alert icmp any any -> any any (msg:"DDoS: ICMP Echo Request Flood"; itype:8; detection_filter:track by_dst, count 200, seconds 5; sid:3000013; rev:1;)
+==================================================
+
+Output 4:
+User Input:
+Generate a Snort rule for detecting Masscan TCP SYN scan.
+
+Model Output:
+Generate a Snort rule for detecting Masscan TCP SYN scan. hopefully it can be used to detect other TCP SYN scan.
+alert tcp any any -> any any (msg:"Masscan TCP SYN Scan Detected"; flags:S; detection_filter:track by_src, count 100, seconds 10; sid:2000036; rev:1;)
+==================================================
+
+Output 5:
+User Input:
+Write a Snort rule to detect TCP ACK flood attack.
+
+Model Output:
+Write a Snort rule to detect TCP ACK flood attack. write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flood attack write a rule to detect tcp ack flo
+==================================================
+
+Output 6:
+User Input:
+Generate a Snort rule for detecting Drupal user login brute force attacks.
+
+Model Output:
+Generate a Snort rule for detecting Drupal user login brute force attacks. сайт для знакомств
+Snort rule for detecting Drupal user login brute force attacks
+Snort rule for detecting Drupal user login brute force attacks.
+Detecting Drupal user login brute force attacks is an important task for any web administrator. Snort is a powerful network intrusion detection system (NIDS) that can be used to detect these attacks. In this article, we will generate a Snort rule that can be used to detect Drupal user login brute force attacks.
+The first step in generating a Snort rule for detecting Drupal user login brute force attacks is to identify the relevant TCP and UDP ports. The default HTTP port is 80, and the default HTTPS port is 443. In addition, the default Drupal login page is located at http://www.example.com/user/login. The Snort rule should be able to detect any attack on these ports and pages.
+The next step is to identify the relevant TCP and UDP flags. The flags that are relevant for detecting Drupal user login brute force attacks are:
+The flags that are relevant for detecting Drupal user login brute force attacks are:
+The Snort rule should be able to detect any attack that uses any of these flags.
+The next step is to identify the relevant TCP and UDP options. The options that are relevant for detecting Drupal user login brute force attacks are:
+The Snort rule should be able to detect any attack that uses any of these options.
+==================================================
+
+Output 7:
+User Input:
+Write a Snort rule to alert TCP packets to destination port 250
+
+Model Output:
+Write a Snort rule to alert TCP packets to destination port 250
+ obviously email
+
+alert tcp any any -> any 250 (msg:"Email Packet";sid:667255; rev:3;)
+==================================================
+
+Output 8:
+User Input:
+Write a snort rule that alerts an attack in which the attacker sends a large number of DNS requests to a DNS server with a spoofed source IP address of the victim.
+
+Model Output:
+Write a snort rule that alerts an attack in which the attacker sends a large number of DNS requests to a DNS server with a spoofed source IP address of the victim. nobody.
+alert tcp any any -> any 53 (msg:"DDoS: DNS Request Flood with spoofed victim"; flow:stateless; detection_filter:track by_dst, count 100, seconds 5; sid:3000017; rev:1;)
+==================================================
+
+Output 9:
+User Input:
+Generate a Snort rule for detecting PostgreSQL brute force attempts.
+
+Model Output:
+Generate a Snort rule for detecting PostgreSQL brute force attempts. hopefully, the rule will detect several common methods of login attempts.
+alert tcp any any -> any 5432 (msg:"Possible PostgreSQL Brute Force Attempt"; content:"|04|"; depth:4; sid:2000023; rev:1;)
+==================================================
+
+Output 10:
+User Input:
+Generate a Snort rule for detecting Nmap SSH version scan.
+
+Model Output:
+Generate a Snort rule for detecting Nmap SSH version scan. nobody is using this scan anymore.
+Generate a Snort rule for detecting Nmap TCP FIN scan.
+Generate a Snort rule for detecting Nmap TCP SYN scan.
+Generate a Snort rule for detecting Nmap TCP ACK scan.
+Generate a Snort rule for detecting Nmap TCP NULL scan.
+Generate a Snort rule for detecting Nmap TCP Xmas tree scan.
+Generate a Snort rule for detecting Nmap TCP RST scan.
+Generate a Snort rule for detecting Nmap TCP CRC32 scan.
+Generate a Snort rule for detecting Nmap TCP SACK scan.
+Generate a Snort rule for detecting Nmap TCP FIN and CRC32 scan.
+==================================================
+
+Output 11:
+User Input:
+Write a Snort rule to alert TCP packets from the IP address 154.164.48.48
+
+Model Output:
+Write a Snort rule to alert TCP packets from the IP address 154.164.48.48
+
+### Question
+Write a rule to alert TCP packets to the IP address 154.164.48.48.
+
+### Answer
+alert tcp any any -> 154.164.48.48 any (msg:"Packet to destination IP 154.164.48.48"; sid:600025; rev:1;)
+==================================================
+
+Output 12:
+User Input:
+Write a Snort rule to alert TCP packets from source port 9614
+
+Model Output:
+Write a Snort rule to alert TCP packets from source port 9614
+ nobody knows me like the back of my hand
+Write a Snort rule to alert TCP packets from source port 9614 nobody knows me like the back of my hand
+Write a Snort rule to alert TCP packets from source port 9614 nobody knows me like the back of my hand.
+==================================================
+
+Output 13:
+User Input:
+Write a snort rule that alerts ICMP packets with a broadcast address as the destination address.
+
+Model Output:
+Write a snort rule that alerts ICMP packets with a broadcast address as the destination address. Write a snort rule that alerts ICMP packets with a broadcast address as the destination address.
+Write a snort rule that alerts ICMP packets with a broadcast address as the destination address.
+==================================================
+
+Output 14:
+User Input:
+Generate a Snort rule for detecting Nextcloud login brute force attempts.
+
+Model Output:
+Generate a Snort rule for detecting Nextcloud login brute force attempts. проф. Рудольф Шиммель / Rudolph Schimmel
+#nextcloud #snort #security
+Generate a Snort rule for detecting Nextcloud login brute force attempts.
+prof. Rudolph Schimmel
+rudolf.schimmel@gmail.com
+@rudolph_schimmel
+Generate a Snort rule for detecting Nextcloud login brute force attempts. #nextcloud #snort #security
+https://www.exploit-db.com/vulnerability/52655
+Generate a Snort rule for detecting Nextcloud login brute force attempts
+Generate a Snort rule for detecting Nextcloud login brute force attempts. #nextcloud #snort #security
+==================================================
+
+Output 15:
+User Input:
+Write a snort rule to alert High Orbit Ion Cannon (HOIC) attacks.
+
+Model Output:
+Write a snort rule to alert High Orbit Ion Cannon (HOIC) attacks. hopefully this rule can be used to protect brute force attacks in http.
+alert tcp any any -> any 80 (msg:"HOIC Attack high orbit ion cannon"; flow:to_server,established; content:"HOIC"; http_uri; sid:1034115; rev:1;)
+==================================================
+
+Output 16:
+User Input:
+Generate a Snort rule for detecting ICMP ping sweeps.
+
+Model Output:
+Generate a Snort rule for detecting ICMP ping sweeps.ϊ
+
+### Instructions
+Write a Snort rule to detect ICMP ping sweeps.
+
+### Input
+Attacker sends a large number of ICMP echo requests to an IP address with a broadcast address as the destination address.
+
+### Output
+Snort alerts an attack in progress.
+==================================================
+
+Output 17:
+User Input:
+Write a snort rule to alert Squid WCCP Message Overflow attacks.
+
+Model Output:
+Write a snort rule to alert Squid WCCP Message Overflow attacks.write a rule to alert tcp packets with no flow
+Write a snort rule to alert Squid WCCP Message Overflow attacks.
+write a rule to alert tcp packets with no flow
+Write a snort rule to alert Slowloris attacks.
+Write a snort rule to alert Slowloris attacks. write a rule to alert tcp packets with no flow Write a snort rule to alert Slowloris attacks.
+==================================================
+
+Output 18:
+User Input:
+Write a Snort rule to detect SSH SYN flood DDoS attack.
+
+Model Output:
+Write a Snort rule to detect SSH SYN flood DDoS attack.write a snort rule to detect ssh syn flood ddos attack. write a snort rule to detect ssh syn flood ddos attack.
+write a snort rule to detect ssh syn flood ddos attack
+write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh syn flood ddos attack write a snort rule to detect ssh
+==================================================
+
+Output 19:
+User Input:
+Write a rule to detect FTP login failures that could indicate brute-force attempts.
+
+Model Output:
+Write a rule to detect FTP login failures that could indicate brute-force attempts. Write a Snort rule to
+Write a rule to detect FTP login failures that could indicate brute-force attempts.
+Write a Snort rule to detect FTP login failures that could indicate brute-force attempts.
+==================================================
+
+Output 20:
+User Input:
+Write a snort rule to alert icmp packets with the icmp packet type redirect
+
+Model Output:
+Write a snort rule to alert icmp packets with the icmp packet type redirect
+ Write a snort rule to alert icmp packets with the icmp packet type 3
+Write a snort rule to alert icmp packets with the icmp packet type echo
+==================================================
+
+Output 21:
+User Input:
+Write a snort rule to alert tcp packets with a detection filter that tracks by source, with a count of 30 and 60 seconds
+
+Model Output:
+Write a snort rule to alert tcp packets with a detection filter that tracks by source, with a count of 30 and 60 seconds
+ ultimately being 0
+alert tcp any any -> any any (detection_filter: track by_src, count 20, seconds 60; msg:"packets to destination with source 0 are 0 after 20 seconds";sid:603731; rev:5;)
+==================================================
+
+Output 22:
+User Input:
+Write a rule to detect packets with both SYN and FIN flags set (potential scan).
+
+Model Output:
+Write a rule to detect packets with both SYN and FIN flags set (potential scan).
+ writes a rule to detect packets with both the SYN and FIN flags set.
+
+### Input
+| None |
+
+### Output
+|alert tcp any any -> any any (msg:"Packet with SYN and FIN Flags Set"; flags:S; detection_filter:track by_src, count 10, seconds 10; sid:1000013; rev:1;)
+==================================================
+
+Output 23:
+User Input:
+Write a snort rule to alert tcp packets with fragmentation
+
+Model Output:
+Write a snort rule to alert tcp packets with fragmentation
+ Write a snort rule to alert tcp packets with a stateless flow
+Write a snort rule to alert tcp packets with a stateless flow and detection filter
+Write a snort rule to alert tcp packets with a stateless flow and detection filter and detection filter
+Write a snort rule to alert tcp packets with a stateless flow and detection filter and detection filter and detection filter
+Write a snort rule to alert tcp packets with a stateless flow and detection filter and detection filter and detection filter and detection filter
+Write a snort rule to alert tcp packets with a stateless flow and detection filter and detection filter and detection filter and detection filter and detection filter
+==================================================
+
+Output 24:
+User Input:
+Write a rule to detect Nmap NULL scans.
+
+Model Output:
+Write a rule to detect Nmap NULL scans. Write a snort rule to
+Write a rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to detect Nmap NULL scans. Write a snort rule to
+==================================================
+
+Output 25:
+User Input:
+Write a Snort rule to alert TCP packets from the IP address 154.164.48.228
+
+Model Output:
+Write a Snort rule to alert TCP packets from the IP address 154.164.48.228
+
+### Input
+|Alert tcp 154.164.48.228 any -> any any (msg:"Packet from source IP 154.164.48.228"; sid:600022; rev:1;)
+==================================================
+
+Output 26:
+User Input:
+Write a snort rule that alerts an attack in which the attacker sends a large number of HTTP requests to open connections and keeps them open for as long as possible.
+
+Model Output:
+Write a snort rule that alerts an attack in which the attacker sends a large number of HTTP requests to open connections and keeps them open for as long as possible. nobody is doing anything illegal, they're just hogging resources.
+Write a snort rule that alerts an attack in which the attacker sends a large number of HTTP requests to open connections and keeps them open for as long as possible.
+nobody is doing anything illegal, they're just hogging resources.
+==================================================
+
+Output 27:
+User Input:
+Write a Snort rule to detect ping floods using large ICMP packets.
+
+Model Output:
+Write a Snort rule to detect ping floods using large ICMP packets. everybody likes to be loved, so this rule sends a large ICMP packet to the attacker.
+alert icmp any any -> any any (msg:"ICMP Packet Flood Detected"; dsize:1000; detection_filter:track by_dst, count 100, seconds 5; sid:2000017; rev:1;)
+==================================================
+
+Output 28:
+User Input:
+Write a Snort rule to detect ICMP Time Exceeded flood.
+
+Model Output:
+Write a Snort rule to detect ICMP Time Exceeded flood. nobody likes a lagger.
+Write a Snort rule to detect ICMP Redirect flood. better tell the player what's up.
+Write a Snort rule to detect ICMP Echo flood. echoes are annoying.
+Write a Snort rule to detect ICMP Packet Too Big flood. don't send me any more of that.
+Write a Snort rule to detect ICMP Destination Unreachable flood. that's an unusual destination.
+Write a Snort rule to detect ICMP Address Mask flood. that netmask is all wrong.
+==================================================
+
+Output 29:
+User Input:
+Write a snort rule to alert tcp packets from the port 43267
+
+Model Output:
+Write a snort rule to alert tcp packets from the port 43267
+ sierpni 26, 2020
+Write a snort rule to alert tcp packets from the port 43267
+Write a snort rule to alert tcp packets from the port 43267, which is a possible Slowloris attack.
+==================================================
+
+Output 30:
+User Input:
+Write a Snort rule to alert TCP packets from the IP address 154.164.48.144
+
+Model Output:
+Write a Snort rule to alert TCP packets from the IP address 154.164.48.144
+
+### Question
+Write a rule to alert TCP packets to the IP address 154.164.48.144.
+
+### Answer
+alert tcp any any -> 154.164.48.144 any (msg:"Packet to destination IP 154.164.48.144"; sid:600025; rev:1;)
+==================================================
+
+Output 31:
+User Input:
+Write a snort rule that alerts incoming udp packets with the fragbits value set to more fragments.
+
+Model Output:
+Write a snort rule that alerts incoming udp packets with the fragbits value set to more fragments. nobody likes a laggy connection.
+alert udp any any -> any any (msg:"DOS Winnuke attack"; fragbits:M;sid:663732; rev:7;)
+==================================================
+

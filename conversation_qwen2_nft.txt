@@ -1,0 +1,1165 @@
+Output 1:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 5969, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 5969, Log prefix: 'Suspicious activity: '.
+
+tcp dport 5969 log prefix "Suspicious activity: " reject
+==================================================
+
+Output 2:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 181.172.176.231
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 181.172.176.231
+Here is the nftables rule to drop all packets from the specific IP address 181.172.176.231:
+
+ip saddr 181.172.176.231 drop
+
+This rule will drop all incoming packets that originate from the IP address 181.172.176.231.
+==================================================
+
+Output 3:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 6885, limit: 15/minute
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 6885, limit: 15/minute.
+
+Here is a nftables rule that allow new incoming TCP connections on port 6885 with a rate limit of 15 connections per minute:
+
+tcp dport 6885 ct state new limit rate 15/minute accept
+
+This rule will allow new incoming TCP connections on port 6885, check if the connection is a new connection (not a continued connection), and apply a rate limit of 15 connections per minute. If the rate limit is exceeded, the connection will be dropped.
+==================================================
+
+Output 4:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 174.234.187.32
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 174.234.187.32
+
+Here is the nftables rule that allow HTTP (port 80) and HTTPS (port 443) connections from a specific IP (174.234.187.32):
+
+ip saddr 174.234.187.32 tcp dport 80 accept
+ip saddr 174.234.187.32 tcp dport 443 accept
+
+This rule will allow incoming HTTP and HTTPS connections from the IP address 174.234.187.32 to your server.
+==================================================
+
+Output 5:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 7087, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 7087, Log prefix: 'Log entry: '.
+
+tcp dport 7087 log prefix "Log entry: " reject
+==================================================
+
+Output 6:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 835, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 835, Log prefix: 'Log entry: '.
+
+tcp dport 835 log prefix "Log entry: " accept
+==================================================
+
+Output 7:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 219.1.147.195
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 219.1.147.195
+
+ip saddr 219.1.147.195 udp dport 53 accept
+==================================================
+
+Output 8:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 114.144.108.241
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 114.144.108.241
+
+ip saddr 114.144.108.241 drop
+==================================================
+
+Output 9:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 5626, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 5626, Log prefix: 'Log entry: '.
+
+tcp dport 5626 log prefix "Log entry: " reject
+==================================================
+
+Output 10:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 3272, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 3272, Log prefix: 'Suspicious activity: '.
+
+tcp dport 3272 log prefix "Suspicious activity: " reject
+==================================================
+
+Output 11:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 4649, Log prefix: 'Alert: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 4649, Log prefix: 'Alert: '.
+
+tcp dport 4649 log prefix "Alert: " reject
+==================================================
+
+Output 12:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 8769, Log prefix: 'Alert: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 8769, Log prefix: 'Alert: '.
+
+tcp dport 8769 log prefix "Alert: " reject
+==================================================
+
+Output 13:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 60.181.232.73
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 60.181.232.73
+
+ip saddr 60.181.232.73 udp dport 53 accept
+==================================================
+
+Output 14:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 2932, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 2932, Log prefix: 'Blocked attempt: '.
+
+tcp dport 2932 log prefix "Blocked attempt: " reject
+==================================================
+
+Output 15:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 3344
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 3344
+
+udp dport 3344 accept
+
+Explanation:
+- "udp" specifies that the rule applies to UDP traffic.
+- "dport 3344" specifies that the rule allows traffic on a custom port, which is set to 3344 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 16:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 8272, limit: 5/second
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 8272, limit: 5/second.
+
+Here is a nftables rule that allow new incoming TCP connections on port 8272 with a rate limit of 5 connections per second:
+
+tcp dport 8272 ct state new limit rate 5/second accept
+
+This rule will allow new incoming TCP connections on port 8272, check if the connection is a new connection (not a continued connection), and apply a rate limit of 5 connections per second. If a new connection attempts to establish more than 5 connections per second, it will be dropped.
+==================================================
+
+Output 17:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 137.99.224.3
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 137.99.224.33
+Here is the nftables rule to drop all packets from the specific IP address 137.99.224.33:
+
+ip saddr 137.99.224.33 drop
+
+This rule will drop all incoming packets that originate from the IP address 137.99.224.33.
+==================================================
+
+Output 18:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4056, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4056, Log prefix: 'Suspicious activity: '.
+
+tcp dport 4056 log prefix "Suspicious activity: " accept
+==================================================
+
+Output 19:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 2530, limit: 15/minute
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 2530, limit: 15/minute.
+
+Here is a nftables rule that allow new incoming TCP connections on port 2530 with a rate limit of 15/minute:
+
+tcp dport 2530 ct state new limit rate 15/minute accept
+
+This rule will allow new incoming TCP connections on port 2530, check if the connection is a new connection (not a reply or established connection), and apply a rate limit of 15 allowed connections per minute. If the rate limit is exceeded, the connection will be dropped.
+==================================================
+
+Output 20:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 55.46.148.152
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 55.46.148.152
+
+Here is a nftables rule that drop SMTP traffic from the known spammer IP 55.46.148.152:
+```sql
+ip saddr 55.46.148.152 tcp dport 25 drop
+```
+This rule will drop all incoming TCP traffic on port 25 (SMTP) that is coming from the IP address 55.46.148.152.
+==================================================
+
+Output 21:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 199.254.48.200
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 199.254.48.200
+
+ip saddr 199.254.48.200 udp dport 53 accept
+==================================================
+
+Output 22:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 41.200.123.145
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 41.200.123.145
+
+ip saddr 41.200.123.145 udp dport 53 accept
+==================================================
+
+Output 23:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4946, Log prefix: 'Alert: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4946, Log prefix: 'Alert: '.
+
+tcp dport 4946 log prefix "Alert: " accept
+==================================================
+
+Output 24:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 74.174.110.47
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 74.174.110.47
+
+Here is the nftables rule that allow HTTP (port 80) and HTTPS (port 443) connections from a specific IP (74.174.110.47):
+
+ip saddr 74.174.110.47 tcp dport 80 accept
+ip saddr 74.174.110.47 tcp dport 443 accept
+
+This rule will allow incoming HTTP and HTTPS connections from the IP address 74.174.110.47.
+==================================================
+
+Output 25:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 157.36.236.199
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 157.36.236.199.
+ip saddr 157.36.236.199 tcp dport 80 accept
+ip saddr 157.36.236.199 tcp dport 443 accept
+==================================================
+
+Output 26:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 8966, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 8966, Log prefix: 'Blocked attempt: '.
+
+tcp dport 8966 log prefix "Blocked attempt: " reject
+==================================================
+
+Output 27:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 4609
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 4609
+
+udp dport 4609 accept
+
+Explanation:
+- "udp" specifies that the rule applies to UDP traffic.
+- "dport 4609" specifies that the rule allows traffic on a custom port, which is set to 4609 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 28:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 6758, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 6758, Log prefix: 'Suspicious activity: '.
+
+tcp dport 6758 log prefix "Suspicious activity: " reject
+==================================================
+
+Output 29:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 4646, limit: 10/second
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 4646, limit: 10/second.
+
+Here is a nftables rule that allow new incoming TCP connections on port 4646 with a rate limit of 10 connections per second:
+
+tcp dport 4646 ct state new limit rate 10/second accept
+
+This rule will allow new incoming TCP connections on port 4646, check if the connection has already been logged (state new), apply a rate limit of 10 connections per second, and accept the connection if all conditions are met.
+==================================================
+
+Output 30:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 180.72.131.7
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 180.72.131.78
+ip saddr 180.72.131.78 drop
+==================================================
+
+Output 31:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 127.16.70.242
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 127.16.70.242
+tcp dport 53 accept ip saddr 127.16.70.242
+==================================================
+
+Output 32:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 6059
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 6059
+
+tcp dport 6059 accept
+udp dport 6059 accept
+==================================================
+
+Output 33:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 4316, limit: 20/minute
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 4316, limit: 20/minute.
+
+Here is a nftables rule that allow new incoming TCP connections on port 4316 with a rate limit of 20/minute:
+
+tcp dport 4316 ct state new limit rate 20/minute accept
+
+This rule will allow new incoming TCP connections on port 4316, check if the connection is a new connection (not a reply or established connection), apply a rate limit of 20/minute and accept the connection if it meets the criteria.
+==================================================
+
+Output 34:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 7562, limit: 10/second
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 7562, limit: 10/second.
+
+Here is a nftables rule that allow new incoming TCP connections on port 7562 with a rate limit of 10 connections per second:
+
+tcp dport 7562 ct state new limit rate 10/second accept
+
+This rule will allow new incoming TCP connections on port 7562, check the state of the connection and if it's new, apply a rate limit of 10 connections per second and accept the connection.
+==================================================
+
+Output 35:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 27.204.19.34
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 27.204.19.34
+
+ip saddr 27.204.19.34 drop
+==================================================
+
+Output 36:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 204.75.197.21
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 204.75.197.217
+
+Here is a nftables rule that drop SMTP traffic from the known spammer IP 204.75.197.217:
+```sql
+ip saddr 204.75.197.217 tcp dport 25 drop
+```
+This rule will drop all incoming TCP traffic on port 25 (SMTP) that is coming from the IP address 204.75.197.217.
+==================================================
+
+Output 37:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 1749, limit: 15/minute
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 1749, limit: 15/minute.
+
+Here's a nftables rule that allow new incoming TCP connections on port 1749 with a rate limit of 15 connections per minute:
+```sql
+tcp dport 1749 ct state new limit rate 15/minute accept
+```
+This rule will allow new incoming TCP connections on port 1749, but will also apply a rate limit of 15 connections per minute to prevent abuse or spamming.
+==================================================
+
+Output 38:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 3543, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 3543, Log prefix: 'Blocked attempt: '.
+
+tcp dport 3543 log prefix "Blocked attempt: " accept
+==================================================
+
+Output 39:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 2810, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 2810, Log prefix: 'Log entry: '.
+
+tcp dport 2810 log prefix "Log entry: " reject
+==================================================
+
+Output 40:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 6688, limit: 10/second
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 6688, limit: 10/second.
+
+Here is a nftables rule that allow new incoming TCP connections on port 6688 with a rate limit of 10 connections per second:
+
+tcp dport 6688 ct state new limit rate 10/second accept
+
+This rule will allow new incoming TCP connections on port 6688, check if the connection has already been logged (state new), apply a rate limit of 10 connections per second, and accept the connection if all conditions are met.
+==================================================
+
+Output 41:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 1287
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 1287
+
+udp dport 1287 accept
+
+Explanation:
+- "udp" specifies that the rule should apply to UDP traffic.
+- "dport 1287" specifies that the rule should allow connections on a custom port, which is set to 1287 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 42:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 537, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 537, Log prefix: 'Blocked attempt: '.
+
+tcp dport 537 log prefix "Blocked attempt: " accept
+==================================================
+
+Output 43:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 49.47.91.206
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 49.47.91.206
+
+ip saddr 49.47.91.206 drop
+==================================================
+
+Output 44:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 142.162.92.63
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 142.162.92.63
+
+ip saddr 142.162.92.63 udp dport 53 accept
+==================================================
+
+Output 45:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 8283
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 8283
+
+udp dport 8283 accept
+
+Explanation:
+- "udp" specifies that the rule should apply to UDP traffic.
+- "dport 8283" specifies that the rule should allow connections on the custom port 8283.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 46:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 184, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 184, Log prefix: 'Suspicious activity: '.
+
+tcp dport 184 log prefix "Suspicious activity: " accept
+==================================================
+
+Output 47:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 6317, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 6317, Log prefix: 'Suspicious activity: '.
+
+tcp dport 6317 log prefix "Suspicious activity: " accept
+==================================================
+
+Output 48:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 111.132.90.25
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 111.132.90.251
+
+Here is a nftables rule that drop SMTP traffic from the known spammer IP (111.132.90.251):
+
+ip saddr 111.132.90.251 tcp dport 25 drop
+
+This rule will drop all incoming TCP traffic on port 25 (SMTP) coming from the IP address 111.132.90.251.
+==================================================
+
+Output 49:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 87.152.182.118
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 87.152.182.118
+
+ip saddr 87.152.182.118 tcp dport 80 accept
+ip saddr 87.152.182.118 tcp dport 443 accept
+==================================================
+
+Output 50:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 91.84.173.23
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 91.84.173.232
+
+ip saddr 91.84.173.232 drop
+==================================================
+
+Output 51:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 212.44.181.2
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 212.44.181.223
+
+ip saddr 212.44.181.223 tcp dport 25 drop
+==================================================
+
+Output 52:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 8816, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 8816, Log prefix: 'Blocked attempt: '.
+
+tcp dport 8816 log prefix "Blocked attempt: " reject
+==================================================
+
+Output 53:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 46.178.139.166
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 46.178.139.166
+Here is the nftables rule to drop all packets from the specific IP address 46.178.139.166:
+
+ip saddr 46.178.139.166 drop
+
+This rule will drop all incoming packets that originate from the IP address 46.178.139.166.
+==================================================
+
+Output 54:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 66.4.113.234
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 66.4.113.234
+
+Here is a nftables rule that drop SMTP traffic from the known spammer IP (66.4.113.234):
+
+ip saddr 66.4.113.234 tcp dport 25 drop
+
+This rule will drop all incoming TCP traffic on port 25 (SMTP) coming from the IP address 66.4.113.234.
+==================================================
+
+Output 55:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1240, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1240, Log prefix: 'Suspicious activity: '.
+
+tcp dport 1240 log prefix "Suspicious activity: " accept
+==================================================
+
+Output 56:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 174.217.244.12
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 174.217.244.128
+
+ip saddr 174.217.244.128 drop
+==================================================
+
+Output 57:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 7983, Log prefix: 'Alert: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 7983, Log prefix: 'Alert: '.
+
+tcp dport 7983 log prefix "Alert: " reject
+==================================================
+
+Output 58:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 1315, limit: 10/second
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 1315, limit: 10/second.
+
+Here is a nftables rule that allow new incoming TCP connections on port 1315 with a rate limit of 10 connections per second:
+
+tcp dport 1315 ct state new limit rate 10/second accept
+
+This rule will allow new incoming TCP connections on port 1315, check if the connection has already been logged (state new), apply a rate limit of 10 connections per second, and accept the connection if all conditions are met.
+==================================================
+
+Output 59:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 74.190.13.186
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 74.190.13.186
+Here is the nftables rule to drop all packets from the IP address 74.190.13.186:
+
+ip saddr 74.190.13.186 drop
+
+This rule will drop all incoming packets that originate from the IP address 74.190.13.186.
+==================================================
+
+Output 60:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 138.28.38.160
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 138.28.38.160
+
+Here is a nftables rule that drop SMTP traffic from the known spammer IP 138.28.38.160:
+```sql
+ip saddr 138.28.38.160 tcp dport 25 drop
+```
+This rule will drop all incoming TCP traffic on port 25 (SMTP) that is coming from the IP address 138.28.38.160.
+==================================================
+
+Output 61:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 8338, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 8338, Log prefix: 'Blocked attempt: '.
+
+tcp dport 8338 log prefix "Blocked attempt: " accept
+==================================================
+
+Output 62:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 174.111.20.194
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 174.111.20.194. chain: input, limit rate 10/second, log prefix "Alert: ", accept ip saddr 174.111.20.194 tcp dport 80 accept ip saddr 174.111.20.194 tcp dport 443
+==================================================
+
+Output 63:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 469, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 469, Log prefix: 'Suspicious activity: '.
+
+tcp dport 469 log prefix "Suspicious activity: " reject
+==================================================
+
+Output 64:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 124.248.209.174
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 124.248.209.174
+Here is the nftables rule to drop all packets from the specific IP address 124.248.209.174:
+
+ip saddr 124.248.209.174 drop
+
+This rule will drop all incoming packets that originate from the IP address 124.248.209.174.
+==================================================
+
+Output 65:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 182.203.63.36
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 182.203.63.36
+
+ip saddr 182.203.63.36 drop
+==================================================
+
+Output 66:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 176.11.82.91
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 176.11.82.91. chain: input, limit rate 10/second
+
+tcp dport 80 log reject limit rate 10/second ct state new accept
+tcp dport 443 log reject limit rate 10/second ct state new accept
+
+Explanation:
+- The rule allows HTTP (port 80) and HTTPS (port 443) connections.
+- It logs any rejected attempts to connect to these ports.
+- It limits the rate of accepted attempts to 10 per second to prevent brute force attacks.
+- The "ct state new" condition ensures that only new connections are accepted, not re-established ones.
+==================================================
+
+Output 67:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 4185
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 4185
+
+udp dport 4185 accept
+
+Explanation:
+- "udp" specifies that the rule should only allow UDP traffic.
+- "dport 4185" specifies that the rule should only allow connections to a specific port, in this case, port 4185.
+- "accept" allows the incoming traffic that matches the rule.
+==================================================
+
+Output 68:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 4395, limit: 5/second
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 4395, limit: 5/second.
+
+Here is a nftables rule that allow new incoming TCP connections on port 4395 with a rate limit of 5 connections per second:
+
+tcp dport 4395 ct state new limit rate 5/second accept
+
+This rule will allow new incoming TCP connections on port 4395, check if the connection is a new connection (not a continued connection), and apply a rate limit of 5 connections per second. If a new connection attempts to exceed this limit, it will be dropped.
+==================================================
+
+Output 69:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 101.2.161.72
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 101.2.161.72
+tcp dport 53 accept ip saddr 101.2.161.72
+
+This rule uses the nftables syntax to allow incoming DNS traffic (port 53) from the trusted IP address (101.2.161.72). The "tcp dport 53" part of the rule specifies that we are only interested in incoming TCP traffic on port 53, which is the default port used by DNS servers. The "accept" keyword tells nftables to allow the traffic, and the "ip saddr 101.2.161.72" part of the rule specifies that we only want to allow traffic from the trusted IP address.
+==================================================
+
+Output 70:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 5802
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 5802
+
+tcp dport 5802 accept
+udp dport 5802 accept
+==================================================
+
+Output 71:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 7593, limit: 5/second
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 7593, limit: 5/second.
+
+Here is a nftables rule that allow new incoming TCP connections on port 7593 with a rate limit of 5 connections per second:
+
+tcp dport 7593 ct state new limit rate 5/second accept
+
+This rule will allow new incoming TCP connections on port 7593, check if the connection is a new connection (not a continued connection), and apply a rate limit of 5 connections per second. If a new connection attempts to establish more than 5 connections per second, it will be dropped.
+==================================================
+
+Output 72:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 157.100.138.43
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 157.100.138.43
+
+Here is a nftables rule that drop SMTP traffic from the known spammer IP (157.100.138.43):
+
+ip saddr 157.100.138.43 tcp dport 25 drop
+
+This rule will drop all incoming TCP traffic on port 25 (SMTP) coming from the IP address 157.100.138.43.
+==================================================
+
+Output 73:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 3478, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 3478, Log prefix: 'Log entry: '.
+
+tcp dport 3478 log prefix "Log entry: " reject
+==================================================
+
+Output 74:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1321, Log prefix: 'Alert: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1321, Log prefix: 'Alert: '.
+
+tcp dport 1321 log prefix "Alert: " accept
+==================================================
+
+Output 75:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 1434, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 1434, Log prefix: 'Log entry: '.
+
+tcp dport 1434 log prefix "Log entry: " reject
+==================================================
+
+Output 76:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 7138, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 7138, Log prefix: 'Log entry: '.
+
+tcp dport 7138 log prefix "Log entry: " reject
+==================================================
+
+Output 77:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4165, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4165, Log prefix: 'Suspicious activity: '.
+
+tcp dport 4165 log prefix "Suspicious activity: " accept
+==================================================
+
+Output 78:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 6722, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 6722, Log prefix: 'Blocked attempt: '.
+
+tcp dport 6722 log prefix "Blocked attempt: " accept
+==================================================
+
+Output 79:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4819, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 4819, Log prefix: 'Blocked attempt: '.
+
+tcp dport 4819 log prefix "Blocked attempt: " accept
+==================================================
+
+Output 80:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 3203, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 3203, Log prefix: 'Blocked attempt: '.
+
+tcp dport 3203 log prefix "Blocked attempt: " reject
+==================================================
+
+Output 81:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 46.122.176.246
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 46.122.176.246
+
+Here is a nftables rule that drop SMTP traffic from the known spammer IP 46.122.176.246:
+```sql
+ip saddr 46.122.176.246 tcp dport 25 drop
+```
+This rule will drop all incoming TCP traffic on port 25 (SMTP) that is coming from the IP address 46.122.176.246.
+==================================================
+
+Output 82:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 7307, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 7307, Log prefix: 'Blocked attempt: '.
+
+tcp dport 7307 log prefix "Blocked attempt: " accept
+==================================================
+
+Output 83:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 4069
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 4069
+
+udp dport 4069 accept
+
+Explanation:
+- "udp" specifies that the rule applies to UDP traffic.
+- "dport 4069" specifies that the rule allows traffic on a custom port, which is set to 4069 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 84:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 5276
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 5276
+
+udp dport 5276 accept
+
+Explanation:
+- "udp" stands for User Datagram Protocol, which is a transport layer protocol used for transmitting data between applications.
+- "dport 5276" specifies that the rule applies to UDP traffic on a custom port, which is set to 5276 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 85:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 2557
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 2557
+
+udp dport 2557 accept
+
+Explanation:
+- "udp" specifies that the rule applies to UDP traffic.
+- "dport 2557" specifies that the rule allows traffic on a custom port, which is set to 2557 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 86:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 107.85.67.167
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 107.85.67.167. chain: input, limit rate 10/second, log prefix "Alert: ", accept ip saddr 107.85.67.167 tcp dport 80 accept ip saddr 107.85.67.167 tcp dport 443 accept
+==================================================
+
+Output 87:
+User Input:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 222.1.232.194
+
+Model Output:
+Generate a nftables rule that drop all packets from a specific IP address. IP: 222.1.232.194
+ip saddr 222.1.232.194 drop
+==================================================
+
+Output 88:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 2377, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 2377, Log prefix: 'Suspicious activity: '.
+
+tcp dport 2377 log prefix "Suspicious activity: " accept
+==================================================
+
+Output 89:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 7845, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 7845, Log prefix: 'Log entry: '.
+
+tcp dport 7845 log prefix "Log entry: " accept
+==================================================
+
+Output 90:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 123
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 1234
+
+udp dport 1234 accept
+
+Explanation:
+- "udp" specifies that the rule should only allow UDP traffic.
+- "dport 1234" specifies that the rule should only allow connections to port 1234.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 91:
+User Input:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 6145, limit: 15/minute
+
+Model Output:
+Generate a nftables rule that allow new incoming TCP connections on a specific port with rate limiting. Port: 6145, limit: 15/minute.
+
+Here is a nftables rule that allow new incoming TCP connections on port 6145 with a rate limit of 15 connections per minute:
+
+tcp dport 6145 ct state new limit rate 15/minute accept
+
+This rule will allow new incoming TCP connections on port 6145, check if the connection is a new connection (not a continued connection), and apply a rate limit of 15 connections per minute. If the rate limit is exceeded, the connection will be dropped.
+==================================================
+
+Output 92:
+User Input:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 215.8.112.178
+
+Model Output:
+Generate a nftables rule that drop SMTP traffic from a known spammer IP. IP: 215.8.112.178
+
+ip saddr 215.8.112.178 tcp dport 25 drop
+==================================================
+
+Output 93:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 5442
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 5442
+
+udp dport 5442 accept
+
+Explanation:
+- "udp" specifies that the rule applies to UDP traffic.
+- "dport 5442" specifies that the rule allows traffic on a custom port, which is set to 5442 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 94:
+User Input:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 144.103.86.195
+
+Model Output:
+Generate a nftables rule that allow HTTP and HTTPS connections from a specific IP. Source IP: 144.103.86.195
+
+Here is the nftables rule that allow HTTP (port 80) and HTTPS (port 443) connections from a specific IP (144.103.86.195):
+
+ip saddr 144.103.86.195 tcp dport 80 accept
+ip saddr 144.103.86.195 tcp dport 443 accept
+
+This rule will allow incoming HTTP and HTTPS connections from the IP address 144.103.86.195.
+==================================================
+
+Output 95:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1382, Log prefix: 'Log entry: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1382, Log prefix: 'Log entry: '.
+
+tcp dport 1382 log prefix "Log entry: " accept
+==================================================
+
+Output 96:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1567, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 1567, Log prefix: 'Suspicious activity: '.
+
+tcp dport 1567 log prefix "Suspicious activity: " accept
+==================================================
+
+Output 97:
+User Input:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 7275
+
+Model Output:
+Generate a nftables rule that allow UDP traffic on a custom port. Port: 7275
+
+udp dport 7275 accept
+
+Explanation:
+- "udp" specifies that the rule applies to UDP traffic.
+- "dport 7275" specifies that the rule allows traffic on a custom port, which is 7275 in this case.
+- "accept" allows the traffic to pass through the firewall.
+==================================================
+
+Output 98:
+User Input:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 131.129.0.51
+
+Model Output:
+Generate a nftables rule that accept DNS traffic from a trusted IP. Trusted IP: 131.129.0.51
+
+ip saddr 131.129.0.51 udp dport 53 accept
+==================================================
+
+Output 99:
+User Input:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 4169, Log prefix: 'Suspicious activity: '
+
+Model Output:
+Generate a nftables rule that log and reject TCP traffic to a specific port. Port: 4169, Log prefix: 'Suspicious activity: '.
+
+tcp dport 4169 log prefix "Suspicious activity: " reject
+==================================================
+
+Output 100:
+User Input:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 3136, Log prefix: 'Blocked attempt: '
+
+Model Output:
+Generate a nftables rule that log all incoming connections on a specific port. Port: 3136, Log prefix: 'Blocked attempt: '.
+
+tcp dport 3136 log prefix "Blocked attempt: " accept
+==================================================
+
