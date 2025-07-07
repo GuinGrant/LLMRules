@@ -7,3 +7,4 @@ Trained_LLM_test.ipynb used to test trained LLM
 Original_test.ipynb can test the original model
 
 nftables_training_1000.jsonl and Snort_training_300.jsonl are training data in alpaca format
+prompt_snort_rule.jsonl is prompt/output format
